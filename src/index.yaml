@@ -2,7 +2,7 @@ ProjectTitle: Science-fest
 
 PageList:
   - file: homepage.html
-    ready: 20
+    ready: 30
   - file: events.html
     ready: 0
   - file: ui.html

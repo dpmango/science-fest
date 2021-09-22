@@ -1,0 +1,30 @@
+// partners
+.partners
+  &__section
+    margin-top: 52px
+  &__row
+    display: flex
+    flex-wrap: wrap
+    &--main
+      margin-top: 46px
+    &--sub
+      margin-top: 26px
+  &__col
+    min-width: 1px
+    min-height: 0
+    &--1-5
+      flex-basis: 20%
+      max-width: 20%
+
+  &__card
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    border: 1px solid $borderColor
+    min-height: 158px
+    padding: 8px
+    &--bl
+      border-left-color: $colorAccent
+    img
+      max-width: 100%
