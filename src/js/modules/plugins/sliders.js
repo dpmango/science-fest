@@ -6,6 +6,7 @@
     data: {
       swipers: {
         events: undefined,
+        news: undefined,
       },
       responsiveSwipers: {
         backstageSwiper: {
@@ -117,6 +118,28 @@
       // events
       this.data.swipers.events = _this.utils.buildSwiper(
         'up-events',
+        {
+          loop: true,
+          spaceBetween: 0,
+          slidesPerView: 'auto',
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+            },
+            992: {
+              slidesPerView: 3,
+            },
+            1200: {
+              slidesPerView: 4,
+            },
+          },
+        },
+        { navigation: true, pagination: true }
+      );
+
+      // events
+      this.data.swipers.news = _this.utils.buildSwiper(
+        'news',
         {
           loop: true,
           spaceBetween: 0,

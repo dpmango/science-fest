@@ -1,0 +1,55 @@
+// News events
+.news
+  .container
+    h2.h2-title.c-accent Новости науки
+
+    .news__slider.swiper-container.js-swiper-news
+      .swiper-wrapper
+        .swiper-slide
+          .newsCard
+            .newsCard__panel
+              .newsCard__date
+                span 06.09
+              .newsCard__image
+                img(src='img/news/news-1.jpg' srcset='img/news/news-1@2x.jpg 2x')
+            .newsCard__title УЧЕНЫЕ МГУ ПРИДУМАЛИ, КАК УЛУЧШИТЬ УРОЖАЙ, ИСПОЛЬЗУЯ МЕНЬШЕ ВОДЫ
+        .swiper-slide
+          .newsCard
+            .newsCard__panel
+              .newsCard__date
+                span 05.09
+              .newsCard__image
+                img(src='img/news/news-2.jpg' srcset='img/news/news-2@2x.jpg 2x')
+            .newsCard__title Студенты МГУ создали возобновляемое космопитание на основе микроводорослей
+        .swiper-slide
+          .newsCard
+            .newsCard__panel
+              .newsCard__date
+                span 04.09
+              .newsCard__image
+                img(src='img/news/news-3.jpg' srcset='img/news/news-3@2x.jpg 2x')
+            .newsCard__title В КАРАЧАЕВО-ЧЕРКЕССКОМ ГУ ИМЕНИ У. Д. АЛИЕВА ПРОЙДЕТ ВЫСТАВКА «ГОРЫ. ГЕРОИ. СИМВОЛЫ»
+        .swiper-slide
+          .newsCard
+            .newsCard__panel
+              .newsCard__date
+                span 03.09
+              .newsCard__image
+                img(src='img/news/news-4.jpg' srcset='img/news/news-4@2x.jpg 2x')
+            .newsCard__title СОТРУДНИКИ ФАКУЛЬТЕТА ВМК МГУ ОБНАРУЖИЛИ СПОСОБ РЕШАТЬ СЛОЖНЫЕ ЗАДАЧИ БЕЗ СУПЕРКОМПЬЮТЕРА
+        .swiper-slide
+          .newsCard
+            .newsCard__panel
+              .newsCard__date
+                span 02.09
+              .newsCard__image
+                img(src='img/news/news-2.jpg' srcset='img/news/news-2@2x.jpg 2x')
+            .newsCard__title Название карточки
+
+
+      .swiper-navbar
+        .swiper-prev.swiper-news-prev
+          +svgMono('arrow-prev')
+        .swiper-pagination.swiper-news-pagination
+        .swiper-next.swiper-news-next
+          +svgMono('arrow-next')
