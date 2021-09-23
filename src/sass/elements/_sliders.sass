@@ -1,0 +1,36 @@
+// sliders
+.swiper-navbar
+  margin-top: 46px
+  display: flex
+  align-items: center
+  justify-content: center
+  .swiper-prev, .swiper-next
+    font-size: 0
+    color: white
+    padding: 5px
+    cursor: pointer
+    transition: color .25s $ease
+    &:hover
+      color: $colorPrimary
+    .ico
+      font-size: 22px
+  .swiper-prev
+    margin-right: 30px
+  .swiper-next
+    margin-left: 30px
+
+  .swiper-pagination
+    display: flex
+    align-items: center
+
+  .swiper-pagination-bullet
+    size: 9px
+    border-radius: 50%
+    background: white
+    margin-right: 20px
+    cursor: pointer
+    transition: background .25s $ease
+    &:last-child
+      margin-right: 0
+    &.swiper-pagination-bullet-active
+      background: $colorPrimary

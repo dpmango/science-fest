@@ -11,8 +11,18 @@
   backface-visibility: hidden
   transform-style: preserve-3d
   &__wrapper
+    position: relative
     display: flex
-    padding: 44px 0
+    padding: 44px 0 40px
+    &::after
+      display: inline-block
+      content: ' '
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      height: 1px
+      background: $colorFontGray
 
   &__logo
     flex: 0 0 auto

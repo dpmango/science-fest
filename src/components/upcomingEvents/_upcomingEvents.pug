@@ -1,0 +1,75 @@
+// Upcoming events
+.upEvents
+  .container
+    .upEvents__title
+      h2.h2-title.c-accent Ближайшие мероприятия в регионах
+      a(href="#").btn.btn-primary.btn-iconed
+        +svgMono('calendar')
+        span КАЛЕНДАРЬ МЕРОПРИЯТИЙ
+
+    .upEvents__slider.swiper-container.js-swiper-up-events
+      .swiper-wrapper
+        each g in [1,2]
+          .swiper-slide
+            .eventCard
+              .eventCard__year 2021
+              .eventCard__date 21 ноября
+              .eventCard__meta
+                | 14:10 — 15:10
+                br
+                | Мастер-Класс | Офлайн
+              .eventCard__location
+                +svgMono('location-outline')
+                span Вологда
+              .eventCard__arrow
+                +svgMono('arrow-right-end')
+              .eventCard__title НАУЧНОЕ МЫШЛЕНИЕ
+          .swiper-slide
+            .eventCard
+              .eventCard__year 2021
+              .eventCard__date 21 ноября
+              .eventCard__meta
+                | 14:10 — 15:10
+                br
+                | Мастер-Класс | Офлайн
+              .eventCard__location
+                +svgMono('location-outline')
+                span Суздаль
+              .eventCard__arrow
+                +svgMono('arrow-right-end')
+              .eventCard__title СОВРЕМЕННЫЕ ТЕНДЕНЦИИ ИНФОРМАЦИОННОЙ ПОДДЕРЖКИ И НАУКИ…
+          .swiper-slide
+            .eventCard
+              .eventCard__year 2021
+              .eventCard__date 21 ноября
+              .eventCard__meta
+                | 14:10 — 15:10
+                br
+                | Мастер-Класс | Офлайн
+              .eventCard__location
+                +svgMono('location-outline')
+                span Тамбов
+              .eventCard__arrow
+                +svgMono('arrow-right-end')
+              .eventCard__title Конкурс для журналистов и блогеров «ProПигмент»
+          .swiper-slide
+            .eventCard
+              .eventCard__year 2021
+              .eventCard__date 21 ноября
+              .eventCard__meta
+                | 14:10 — 15:10
+                br
+                | Конференция, Научная Школа | Офлайн
+              .eventCard__location
+                +svgMono('location-outline')
+                span Пенза
+              .eventCard__arrow
+                +svgMono('arrow-right-end')
+              .eventCard__title СОВРЕМЕННЫЕ ИНСТРУМЕНТЫ, МЕТОДЫ И ТЕХНОЛОГИИ
+
+      .swiper-navbar
+        .swiper-prev.swiper-up-events-prev
+          +svgMono('arrow-prev')
+        .swiper-pagination.swiper-up-events-pagination
+        .swiper-next.swiper-up-events-next
+          +svgMono('arrow-next')
