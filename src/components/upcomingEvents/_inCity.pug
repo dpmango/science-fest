@@ -1,0 +1,48 @@
+// Upcoming events
+.upEvents
+  .container
+    .upEvents__title
+      h2.h2-title.c-accent Площадки мероприятия
+
+    .upEvents__slider.swiper-container.js-swiper-up-events
+      .swiper-wrapper
+        each g in [1,2]
+          .swiper-slide
+            .upEvents__location
+              +svgMono('location')
+              span Фундаментальная библиотека МГУ
+            a(href="#").eventCard
+              .eventCard__date 21 ноября
+              .eventCard__meta
+                | 14:10 — 15:10
+                br
+                | Мастер-Класс | Офлайн
+              .eventCard__arrow
+                +svgMono('arrow-right-end')
+              .eventCard__title СОВРЕМЕННЫЕ ИНСТРУМЕНТЫ, МЕТОДЫ И ТЕХНОЛОГИИ
+            a(href="#").eventCard
+              .eventCard__date 22 ноября
+              .eventCard__meta
+                | 14:10 — 15:10
+                br
+                | Выставка
+              .eventCard__arrow
+                +svgMono('arrow-right-end')
+              .eventCard__title СОВРЕМЕННЫЕ ИНСТРУМЕНТЫ, МЕТОДЫ И ТЕХНОЛОГИИ
+            a(href="#").eventCard
+              .eventCard__date 23 ноября
+              .eventCard__meta
+                | 14:10 — 15:10
+                br
+                | Мастер-Класс | Офлайн
+              .eventCard__arrow
+                +svgMono('arrow-right-end')
+              .eventCard__title Конкурс для журналистов и блогеров «ProПигмент»
+
+
+      .swiper-navbar
+        .swiper-prev.swiper-up-events-prev
+          +svgMono('arrow-prev')
+        .swiper-pagination.swiper-up-events-pagination
+        .swiper-next.swiper-up-events-next
+          +svgMono('arrow-next')

@@ -15,22 +15,39 @@
     .ico
       font-size: 22px
   .swiper-prev
-    margin-right: 30px
+    margin-right: 24px
   .swiper-next
-    margin-left: 30px
+    margin-left: 24px
 
   .swiper-pagination
     display: flex
     align-items: center
 
   .swiper-pagination-bullet
-    size: 9px
-    border-radius: 50%
-    background: white
-    margin-right: 20px
+    position: relative
+    size: 20px
+    margin-right: 10px
     cursor: pointer
-    transition: background .25s $ease
+    &::after
+      display: inline-block
+      content: ' '
+      size: 9px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      border-radius: 50%
+      background: white
+      transition: background .25s $ease
     &:last-child
       margin-right: 0
-    &.swiper-pagination-bullet-active
-      background: $colorPrimary
+    &.swiper-pagination-bullet-active, &:hover
+      &::after
+        background: $colorPrimary
+
+  &--white
+    .swiper-prev, .swiper-next
+      color: $colorAccent
+    .swiper-pagination-bullet
+      &::after
+        background: $colorAccent
