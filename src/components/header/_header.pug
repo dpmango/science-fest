@@ -26,12 +26,18 @@ header.header
                 +svgMono('social-tiktok')
 
           .header__actions
+            .header__action
+              +svgMono('location-outline')
+              span.header__action-text Москва
+              a(href="#").header__language
+                span Изменить
+                +svgMono('caret')
             a(href="#").header__action
               +svgMono('search')
-              span Поиск
+              span.header__action-text Поиск
             a(href="#").header__action
               +svgMono('user')
-              span Личный кабинет
+              span.header__action-text Личный кабинет
 
           .header__hamburger
             .hamburger.js-hamburger

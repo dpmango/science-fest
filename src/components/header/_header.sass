@@ -63,16 +63,45 @@
       margin-right: 0
     .ico
       font-size: 15px
+  a.header__action:hover
+    .header__action-text
+      color: white
+
+  &__action-text
+    display: inline-block
+    font-size: 16px
+    font-weight: 500
+    margin-left: 8px
+    color: $colorPrimary
+    transition: color .25s $ease
+
+  &__language
+    position: relative
+    display: inline-flex
+    align-items: center
+    margin-left: 8px
+    cursor: pointer
+    &::after
+      display: inline-block
+      content: ' '
+      position: absolute
+      bottom: -2px
+      left: 0
+      right: 0
+      height: 0
+      border-bottom: 2px dashed white
+      transition: right .25s $ease
     span
       display: inline-block
       font-size: 16px
-      font-weight: 500
-      margin-left: 8px
-      color: $colorPrimary
-      transition: color .25s $ease
+      line-height: (20 / 16)
+      letter-spacing: 0.005em
+      margin-right: 6px
+    .ico
+      font-size: 4px
     &:hover
-      span
-        color: white
+      &::after
+        right: 100%
 
 
   &__menu

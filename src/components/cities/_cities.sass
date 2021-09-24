@@ -11,6 +11,7 @@
     line-height: 1.2
     font-weight: 500
     a
+      display: inline-block
       position: relative
       &::after
         display: inline-block
@@ -25,3 +26,33 @@
       &:hover
         &::after
           height: 1px
+
+  &__selector
+    display: inline
+    font-size: 36px
+
+  &__selector-action
+    position: relative
+    display: inline-flex
+    align-items: center
+    color: $colorAccent
+    cursor: pointer
+    &::after
+      display: inline-block
+      content: ' '
+      position: absolute
+      bottom: -2px
+      left: 0
+      right: 0
+      height: 0
+      border-bottom: 2px dashed $colorAccent
+      transition: right .25s $ease
+    span
+      display: inline-block
+      font-size: 36px
+      margin-right: 8px
+    .ico
+      font-size: 8px
+    &:hover
+      &::after
+        right: 100%
