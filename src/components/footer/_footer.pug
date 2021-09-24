@@ -1,6 +1,96 @@
 // FOOTER :: START
 footer.footer
   .container
-    .footer__wrapper
+    .footer__main
+      .row
+        .col.col-3
+          .footer__logo
+            i.icon.icon-logo
+          .footer__copy © 2006-2021 <br/>Всеросийский Фестиваль науки
+          .footer__contacts
+            a(href="tel:84997000790") 8 (499) 700-07-90
+            a(href="mailto:info@festivalnauki.ru") info@festivalnauki.ru
+            p Москва
 
+        .col.col-9
+          .row
+            .col.col-3
+              .footer__menu
+                .footer__menu-title О ФЕСТИВАЛЕ
+                ul.footer__menu-list
+                  li
+                    a(href="#") Новости
+                  li
+                    a(href="#") Мероприятия Фестиваля
+                  li
+                    a(href="#") Оставить отзыв
+                  li
+                    a(href="#") Частые вопросы
+                  li
+                    a(href="#") Контакты
+                  li
+                    a(href="#") Архив
+
+            .col.col-3
+              .footer__menu
+                .footer__menu-title МЕДИАТЕКА
+                ul.footer__menu-list
+                  li
+                    a(href="#") Фотогалерея
+                  li
+                    a(href="#") Видеогалерея
+                  li
+                    a(href="#") Научно-популярные статьи
+                  li
+                    a(href="#") Материалы для скачивания
+                  li
+                    a(href="#") Пресса о нас
+
+            .col.col-3
+              .footer__menu
+                .footer__decor
+                  include footer-decor.svg
+                .footer__menu-title КОНКУРСЫ
+                ul.footer__menu-list
+                  li
+                    a(href="#") Мир науки глазами детей
+                  li
+                    a(href="#") Ученые будущего
+                  li
+                    a(href="#") Снимай науку!
+                  li
+                    a(href="#") Инновационная журналистика
+                  li
+                    a(href="#") STEM – центры
+
+            .col.col-3
+              .footer__menu
+                .footer__menu-title ПРОГРАММА
+                ul.footer__menu-list
+                  li
+                    a(href="#") Региональные площадки
+                  li
+                    a(href="#") Ближайшие мероприятия
+                  li
+                    a(href="#") Мероприятия на карте
+
+    .footer__bottom
+      a(href="$").footer__developer Разработка сайта: SEBEKON
+
+      ul.footer__socials.social-list.social-list--c-gray
+        li
+          a(href='#')
+            +svgMono('social-facebook')
+        li
+          a(href='#')
+            +svgMono('social-vk')
+        li
+          a(href='#')
+            +svgMono('social-instagram')
+        li
+          a(href='#')
+            +svgMono('social-youtube')
+        li
+          a(href='#')
+            +svgMono('social-tiktok')
 // FOOTER :: END

@@ -1,0 +1,44 @@
+// News
+.news
+  padding: 72px 0
+
+  &__slider
+    margin-top: 32px
+
+
+// newsCard
+.newsCard
+  display: flex
+  flex-direction: column
+  max-width: 320px
+  padding-right: 20px
+  &__panel
+    display: flex
+    width: 226px
+    height: 112px
+  &__date, &__image
+    flex: 0 0 50%
+    max-width: 50%
+    min-width: 1px
+    min-height: 0
+  &__date
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    font-size: 24px
+    line-height: 1
+    background: #2C2B8C
+  &__image
+    position: relative
+    font-size: 0
+    img
+      height: 100%
+      width: 100%
+      object-fit: cover
+  &__title
+    margin-top: 26px
+    font-size: 18px
+    line-height: (22 / 18)
+
+

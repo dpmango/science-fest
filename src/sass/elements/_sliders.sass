@@ -1,0 +1,53 @@
+// sliders
+.swiper-navbar
+  margin-top: 46px
+  display: flex
+  align-items: center
+  justify-content: center
+  .swiper-prev, .swiper-next
+    font-size: 0
+    color: white
+    padding: 5px
+    cursor: pointer
+    transition: color .25s $ease
+    &:hover
+      color: $colorPrimary
+    .ico
+      font-size: 22px
+  .swiper-prev
+    margin-right: 24px
+  .swiper-next
+    margin-left: 24px
+
+  .swiper-pagination
+    display: flex
+    align-items: center
+
+  .swiper-pagination-bullet
+    position: relative
+    size: 20px
+    margin-right: 10px
+    cursor: pointer
+    &::after
+      display: inline-block
+      content: ' '
+      size: 9px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      border-radius: 50%
+      background: white
+      transition: background .25s $ease
+    &:last-child
+      margin-right: 0
+    &.swiper-pagination-bullet-active, &:hover
+      &::after
+        background: $colorPrimary
+
+  &--white
+    .swiper-prev, .swiper-next
+      color: $colorAccent
+    .swiper-pagination-bullet
+      &::after
+        background: $colorAccent

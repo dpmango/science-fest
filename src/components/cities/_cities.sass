@@ -1,0 +1,68 @@
+// cities
+.cities
+  padding: 60px 0 80px
+  &--compact
+    padding-top: 16px
+    padding-bottom: 24px
+
+  &__wrapper
+    position: relative
+  &__decor
+    position: absolute
+    bottom: -42px
+    right: -10px
+
+  &__featured
+    margin-top: 14px
+    font-size: 64px
+    line-height: 1.2
+    font-weight: 500
+    a
+      display: inline-block
+      position: relative
+      &::after
+        display: inline-block
+        content: ' '
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        height: 3px
+        background: white
+        transition: height .25s $ease
+      &:hover
+        &::after
+          height: 1px
+
+  &__selector
+    display: inline
+    font-size: 36px
+
+  &__selector-action
+    position: relative
+    display: inline-flex
+    align-items: center
+    color: $colorAccent
+    cursor: pointer
+    &::after
+      display: inline-block
+      content: ' '
+      position: absolute
+      bottom: -2px
+      left: 0
+      right: 0
+      height: 0
+      border-bottom: 2px dashed $colorAccent
+      transition: right .25s $ease
+    span
+      display: inline-block
+      font-size: 36px
+      margin-right: 8px
+    .ico
+      font-size: 8px
+    &--small
+      span
+        font-size: 24px
+    &:hover
+      &::after
+        right: 100%

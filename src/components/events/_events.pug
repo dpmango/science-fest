@@ -1,0 +1,66 @@
+// events
+.events
+  .container
+    h2.h2-title.c-accent Другие мероприятия в Москве
+
+    .events__slider.swiper-container.js-swiper-events
+      .swiper-wrapper
+        .swiper-slide
+          a(href="#").eventCard
+            .eventCard__image
+              img(src='img/events/event-1.jpg' srcset='img/events/event-1@2x.jpg')
+            .eventCard__year 2021
+            .eventCard__date 21 ноября
+            .eventCard__meta
+              | 14:10 — 15:10
+              br
+              | Мастер-Класс | Офлайн
+            .eventCard__arrow
+              +svgMono('arrow-right-end')
+            .eventCard__title Научное мышление
+        .swiper-slide
+          a(href="#").eventCard
+            .eventCard__image
+              img(src='img/events/event-2.jpg' srcset='img/events/event-2@2x.jpg')
+            .eventCard__year 2021
+            .eventCard__date 21 ноября
+            .eventCard__meta
+              | 14:10 — 15:10
+              br
+              | Мастер-Класс | Офлайн
+            .eventCard__arrow
+              +svgMono('arrow-right-end')
+            .eventCard__title Конкурс для журналистов и блогеров «ProПигмент»
+        .swiper-slide
+          a(href="#").eventCard
+            .eventCard__image
+              img(src='img/events/event-3.jpg' srcset='img/events/event-3@2x.jpg')
+            .eventCard__year 2021
+            .eventCard__date 21 ноября
+            .eventCard__meta
+              | 14:10 — 15:10
+              br
+              | Мастер-Класс | Офлайн
+            .eventCard__arrow
+              +svgMono('arrow-right-end')
+            .eventCard__title Конкурс для журналистов и блогеров «ProПигмент»
+        .swiper-slide
+          a(href="#").eventCard
+            .eventCard__image
+              img(src='img/events/event-4.jpg' srcset='img/events/event-4@2x.jpg')
+            .eventCard__year 2021
+            .eventCard__date 21 ноября
+            .eventCard__meta
+              | 14:10 — 15:10
+              br
+              | Мастер-Класс | Офлайн
+            .eventCard__arrow
+              +svgMono('arrow-right-end')
+            .eventCard__title Конкурс для журналистов и блогеров «ProПигмент»
+
+      .swiper-navbar.swiper-navbar--white
+        .swiper-prev.swiper-events-prev
+          +svgMono('arrow-prev')
+        .swiper-pagination.swiper-events-pagination
+        .swiper-next.swiper-events-next
+          +svgMono('arrow-next')

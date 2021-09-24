@@ -1,0 +1,72 @@
+// projects
+.projects
+
+.projectCard
+  position: relative
+  z-index: 1
+  height: 320px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  overflow: hidden
+  &__panel
+    position: relative
+    z-index: 2
+    display: flex
+    align-items: flex-end
+    max-width: 390px
+    margin-top: 24px
+    background: #2C2B8C
+    padding: 22px 22px 22px 28px
+  &__content
+    padding-right: 20px
+  &__title
+    font-size: 24px
+    line-height: (29 / 24)
+    font-weight: 500
+    text-transform: uppercase
+  &__link
+    margin-top: 8px
+    font-size: 16px
+    font-weight: 500
+    color: #FAB93B
+    text-transform: uppercase
+  &__cover
+    position: absolute 0
+    z-index: 1
+    display: flex
+    flex-direction: column
+    img
+      flex: 1 1 auto
+      height: 100%
+      width: 100%
+      object-fit: cover
+  &__arrow
+    position: relative
+    width: 35px
+    height: 15px
+    color: $colorAccent
+    &::before
+      display: inline-block
+      content: ' '
+      position: absolute
+      top: 50%
+      left: 0
+      right: 2px
+      height: 2px
+      background: $colorAccent
+      transform: translateY(-60%)
+      transition: right .25s $ease
+    .ico
+      position: absolute
+      right: 0
+      top: 0
+      font-size: 15px
+      transition: right .25s $ease
+  &:hover
+    .projectCard
+      &__arrow
+        &::before
+          right: 17px
+        .ico
+          right: 15px

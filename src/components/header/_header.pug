@@ -3,20 +3,67 @@ header.header
   .container
     .header__wrapper
       a(href="homepage.html").header__logo
-        +svgMono('email')
-      ul.header__menu
-        li
-          a(href="homepage.html") Homepage
-        li
-          a(href="page.html") Shop
-        li
-          a(href="page.html") Lorem
+        i.icon.icon-logo
 
-      .header__hamburger
-        .hamburger.js-hamburger
-          span
-          span
-          span
+      .header__main
+        // top
+        .header__main-top
+          ul.header__socials.social-list.social-list--c-primary
+            li
+              a(href='#')
+                +svgMono('social-facebook')
+            li
+              a(href='#')
+                +svgMono('social-vk')
+            li
+              a(href='#')
+                +svgMono('social-instagram')
+            li
+              a(href='#')
+                +svgMono('social-youtube')
+            li
+              a(href='#')
+                +svgMono('social-tiktok')
+
+          .header__actions
+            .header__action
+              +svgMono('location-outline')
+              span.header__action-text Москва
+              a(href="#").header__language
+                span Изменить
+                +svgMono('caret')
+            a(href="#").header__action
+              +svgMono('search')
+              span.header__action-text Поиск
+            a(href="#").header__action
+              +svgMono('user')
+              span.header__action-text Личный кабинет
+
+          .header__hamburger
+            .hamburger.js-hamburger
+              span
+              span
+              span
+
+
+        // menu
+        ul.header__menu
+          li
+            a(href="homepage.html") Новости
+          li
+            a(href="page.html") О Фестивале
+          li
+            a(href="page.html") Медиатека
+          li
+            a(href="page.html") Конкурсы
+          li
+            a(href="page.html") Мероприятия
+          li
+            a(href="page.html") Прессе
+          li
+            a(href="page.html") Контакты
+
+
 
 // MOBILE NAVI
 .mobile-navi

@@ -7,12 +7,13 @@ html(lang="en")
   body
     // place where pjax bindings happen's
     #barba-wrapper
-      block header
-        include ../../components/header/_header
-
       // what should be changed with every pjax
       .page(class=outClass)
         .page__content
+          block header
+            include ../../components/header/_header
+
+
           block content
 
         block footer
