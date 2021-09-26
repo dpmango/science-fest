@@ -6,6 +6,12 @@
   padding-left: 40px
   padding-right: 40px
 
++r($xl)
+  .container
+    padding-left: 30px
+    padding-right: 30px
+
+
 +r($sm)
   .container
     padding-left: 20px
@@ -28,6 +34,12 @@
   margin: 0
   .col
     padding: 0
+
+.row.margin-6
+  margin: -3px
+  .col
+    padding: 3px
+
 
 .col-1
   width: 100%
@@ -77,6 +89,10 @@
   width: 100%
   flex-basis: $col12
   max-width: $col12
+.col-1-5
+  width: 100%
+  flex-basis: 20%
+  max-width: 20%
 
 // responsive (desktop first)
 $sizes: ("xl": $xl, "lg": $lg, "md": $md, "sm": $sm);

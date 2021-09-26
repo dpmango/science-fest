@@ -1,9 +1,9 @@
 /* Hamburger
 /* https://codepen.io/ahmadbassamemran/pen/abopOMY
-$width: 28px
-$height: 24px
-$span2: 11px
-$span3: 22px
+$width: 32px
+$height: 16px
+$span2: 7px
+$span3: 14px
 $barHeight: 2px
 $bez: cubic-bezier(0.8, 0.5, 0.2, 1.4)
 
@@ -20,10 +20,10 @@ $bez: cubic-bezier(0.8, 0.5, 0.2, 1.4)
   span
     width: 100%
     height: $barHeight
-    background-color: $colorPrimary
+    background-color: white
     display: block
     position: absolute
-    border-radius: 2px
+    border-radius: 4px
     transition: all .5s ease
     will-change: transform
     &:nth-child(1)
@@ -69,9 +69,9 @@ $bez: cubic-bezier(0.8, 0.5, 0.2, 1.4)
   40%
     transform: translate(0, 0) scale(1)
   50%
-    transform: translate(0, 9px) scale(1)
+    transform: translate(0, 6px) scale(1)
   80%
-    transform: translate(0, -9px) scale(1)
+    transform: translate(0, -6px) scale(1)
   100%
     transform: translate(0, 30px) scale(0)
 
@@ -79,9 +79,9 @@ $bez: cubic-bezier(0.8, 0.5, 0.2, 1.4)
   0%
     transform: translate(0, 0)
   60%
-    transform: rotate(80deg) translate(-5px, -4px)
+    transform: rotate(80deg) translate(-4px, -3px)
   100%
-    transform: rotate(45deg) translate(-5px, -4px)
+    transform: rotate(45deg) translate(-4px, -3px)
 
 @keyframes span1
   0%

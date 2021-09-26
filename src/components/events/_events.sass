@@ -11,8 +11,7 @@
 
 // eventCard
 .eventCard
-  display: flex
-  flex-direction: column
+  display: block
   max-width: 326px
   padding-right: 20px
   & + &
@@ -52,27 +51,6 @@
       font-weight: 500
   &__arrow
     margin-top: 16px
-    position: relative
-    width: 112px
-    height: 15px
-    color: $colorAccent
-    &::before
-      display: inline-block
-      content: ' '
-      position: absolute
-      top: 50%
-      left: 0
-      right: 2px
-      height: 2px
-      background: $colorAccent
-      transform: translateY(-60%)
-      transition: right .25s $ease
-    .ico
-      position: absolute
-      right: 0
-      top: 0
-      font-size: 15px
-      transition: right .25s $ease
   &__title
     margin-top: 14px
     font-size: 18px
@@ -89,3 +67,7 @@
           right: 50px
 
 
++r($lg)
+  .eventCard
+    &__title
+      font-size: 16px

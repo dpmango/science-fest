@@ -6,6 +6,7 @@
     z-index: 1
     margin-top: 40px
     display: flex
+    flex-wrap: wrap
     background: white
     color: $fontColor
     overflow: hidden
@@ -25,6 +26,15 @@
       flex-basis: $col6
       max-width: $col6
 
++r($xl)
+  .greetings
+    padding-bottom: 60px
+    &__col
+      flex-basis: 100%
+      max-width: 100%
+      &.is-active
+        flex: 100%
+        max-width: 100%
 
 .greetingCard
   flex: 1 0 auto
@@ -121,3 +131,11 @@
           right: 17px
         .ico
           right: 15px
+
++r($xl)
+  .greetingCard
+    flex-direction: row
+    &__avatar
+      flex: 0 0 auto
+    &__content
+      padding-left: 16px

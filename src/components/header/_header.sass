@@ -28,12 +28,14 @@
     flex: 0 0 auto
     font-size: 0
     padding-right: 30px
-    transition: opacity .25s $ease
+    transition: opacity .25s ease
     will-change: opacity
     &:hover
       opacity: 0.75
     .ico
       font-size: 92px
+    .icon-logo-mini
+      display: none
 
   &__main
     flex: 0 1 auto
@@ -51,6 +53,8 @@
 
   &__actions
     margin-left: auto
+    display: flex
+    align-items: center
     margin-right: -5px
 
   &__action
@@ -73,7 +77,7 @@
     font-weight: 500
     margin-left: 8px
     color: $colorPrimary
-    transition: color .25s $ease
+    transition: color .25s ease
 
   &__language
     position: relative
@@ -90,7 +94,7 @@
       right: 0
       height: 0
       border-bottom: 2px dashed white
-      transition: right .25s $ease
+      transition: right .25s ease
     span
       display: inline-block
       font-size: 16px
@@ -102,7 +106,6 @@
     &:hover
       &::after
         right: 100%
-
 
   &__menu
     flex: 0 1 auto
@@ -128,7 +131,7 @@
 
   &__hamburger
     display: none
-    padding-left: 20px
+    padding: 5px
 
   &.is-fixed
     // should be normalized to -100% scroll at this point
@@ -145,3 +148,41 @@
   &.is-transitioning
     transition: transform .25s ease
     transform: translate3d(0,-100%,0) !important
+
++r(1280)
+  .header
+    &__menu
+      li
+        margin-right: 16px
+
++r($xl)
+  .header
+    &__wrapper
+      padding: 30px 0
+      &::after
+        left: -30px
+        right: -30px
+    &__logo
+      .icon-logo
+        display: none
+      .icon-logo-mini
+        display: block
+    &__menu
+      display: none
+    &__socials
+      display: none
+
++r($lg)
+  .header
+    &__wrapper
+      padding: 10px 0
+    &__action
+      margin-right: 26px
+      .ico
+        font-size: 20px
+    &__action-text
+      display: none
+    &__language
+      display: none
+    &__hamburger
+      display: block

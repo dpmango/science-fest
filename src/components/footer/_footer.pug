@@ -3,7 +3,7 @@ footer.footer
   .container
     .footer__main
       .row
-        .col.col-3
+        .col.col-3.col-lg-6
           .footer__logo
             i.icon.icon-logo
           .footer__copy © 2006-2021 <br/>Всеросийский Фестиваль науки
@@ -12,7 +12,8 @@ footer.footer
             a(href="mailto:info@festivalnauki.ru") info@festivalnauki.ru
             p Москва
 
-        .col.col-9
+        // menu's col
+        .col.col-9.lg-hidden
           .row
             .col.col-3
               .footer__menu
@@ -74,23 +75,27 @@ footer.footer
                   li
                     a(href="#") Мероприятия на карте
 
+        .col.col-6.lg-visible
+          .footer__socials(data-teleport-target="footerSocials")
+
     .footer__bottom
       a(href="$").footer__developer Разработка сайта: SEBEKON
 
-      ul.footer__socials.social-list.social-list--c-gray
-        li
-          a(href='#')
-            +svgMono('social-facebook')
-        li
-          a(href='#')
-            +svgMono('social-vk')
-        li
-          a(href='#')
-            +svgMono('social-instagram')
-        li
-          a(href='#')
-            +svgMono('social-youtube')
-        li
-          a(href='#')
-            +svgMono('social-tiktok')
+      .footer__socials.js-teleport(data-teleport-condition="<992" data-teleport-to="footerSocials")
+        ul.social-list.social-list--c-gray
+          li
+            a(href='#')
+              +svgMono('social-facebook')
+          li
+            a(href='#')
+              +svgMono('social-vk')
+          li
+            a(href='#')
+              +svgMono('social-instagram')
+          li
+            a(href='#')
+              +svgMono('social-youtube')
+          li
+            a(href='#')
+              +svgMono('social-tiktok')
 // FOOTER :: END
