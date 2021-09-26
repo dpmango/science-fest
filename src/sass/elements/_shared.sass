@@ -45,3 +45,29 @@
       color: $colorFontGray
       &:hover
         color: white
+
+.dynamic-arrow
+  position: relative
+  width: 36px
+  height: 15px
+  color: $colorAccent
+  &::before
+    display: inline-block
+    content: ' '
+    position: absolute
+    top: 50%
+    left: 0
+    right: 2px
+    height: 2px
+    background: $colorAccent
+    transform: translateY(-60%)
+    transition: right .25s $ease
+  .ico
+    position: absolute
+    right: 0
+    top: 0
+    font-size: 15px
+    transition: right .25s $ease
+  &.dynamic-arrow--wide
+    width: 112px
+

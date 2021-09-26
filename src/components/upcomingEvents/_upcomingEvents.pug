@@ -3,9 +3,10 @@
   .container
     .upEvents__title
       h2.h2-title.c-accent Ближайшие мероприятия в регионах
-      a(href="#").btn.btn-primary.btn-iconed
-        +svgMono('calendar')
-        span КАЛЕНДАРЬ МЕРОПРИЯТИЙ
+      div.js-teleport(data-teleport-condition="<1200" data-teleport-to="upEventsCta")
+        a(href="#").btn.btn-primary.btn-iconed
+          +svgMono('calendar')
+          span КАЛЕНДАРЬ МЕРОПРИЯТИЙ
 
     .upEvents__slider.swiper-container.js-swiper-up-events
       .swiper-wrapper
@@ -20,7 +21,7 @@
             .eventCard__location
               +svgMono('location-outline')
               span Вологда
-            .eventCard__arrow
+            .eventCard__arrow.dynamic-arrow.dynamic-arrow--wide
               +svgMono('arrow-right-end')
             .eventCard__title НАУЧНОЕ МЫШЛЕНИЕ
         .swiper-slide
@@ -34,7 +35,7 @@
             .eventCard__location
               +svgMono('location-outline')
               span Суздаль
-            .eventCard__arrow
+            .eventCard__arrow.dynamic-arrow.dynamic-arrow--wide
               +svgMono('arrow-right-end')
             .eventCard__title СОВРЕМЕННЫЕ ТЕНДЕНЦИИ ИНФОРМАЦИОННОЙ ПОДДЕРЖКИ И НАУКИ…
         .swiper-slide
@@ -48,7 +49,7 @@
             .eventCard__location
               +svgMono('location-outline')
               span Тамбов
-            .eventCard__arrow
+            .eventCard__arrow.dynamic-arrow.dynamic-arrow--wide
               +svgMono('arrow-right-end')
             .eventCard__title Конкурс для журналистов и блогеров «ProПигмент»
         .swiper-slide
@@ -62,7 +63,7 @@
             .eventCard__location
               +svgMono('location-outline')
               span Пенза
-            .eventCard__arrow
+            .eventCard__arrow.dynamic-arrow.dynamic-arrow--wide
               +svgMono('arrow-right-end')
             .eventCard__title СОВРЕМЕННЫЕ ИНСТРУМЕНТЫ, МЕТОДЫ И ТЕХНОЛОГИИ
 
@@ -72,3 +73,5 @@
         .swiper-pagination.swiper-up-events-pagination
         .swiper-next.swiper-up-events-next
           +svgMono('arrow-next')
+
+    .upEvents__cta(data-teleport-target="upEventsCta")

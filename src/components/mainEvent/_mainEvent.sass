@@ -13,7 +13,10 @@
     position: relative
 
   &__title
+    position: relative
+    z-index: 2
     font-weight: bold
+    // background: #2B268E
     font-size: 96px
     line-height: 110%
     text-transform: uppercase
@@ -22,6 +25,7 @@
 
   &__image
     position: absolute
+    z-index: 1
     bottom: 10px
     right: 0
     img
@@ -34,6 +38,7 @@
 
   &__bottom-left
     flex: 0 0 auto
+    padding-right: 20px
 
   &__bottom-right
     flex: 0 1 1020px
@@ -62,3 +67,28 @@
     font-weight: 500
     line-height: 1
     color: $colorYellow
+
++r($xl)
+  .mainEvent
+    padding: 24px 0
+    &__date
+      margin-top: 10px
+      font-size: 34px
+    &__title
+      font-size: 48px
+      .ico
+        font-size: 39px
+    &__image
+      max-width: 365px
+      bottom: 0
+    &__bottom
+      margin-top: 16px
+    &__location
+      .ico
+        font-size: 22px
+      p
+        margin-top: 4px
+        font-size: 10px
+    &__locations-title
+      margin-top: 10px
+      font-size: 34px

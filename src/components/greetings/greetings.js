@@ -18,10 +18,8 @@
         $('.js-greetings .greetings__col').removeClass('is-active');
         $('.js-greetings .greetingCard').removeClass('is-active');
 
-        setTimeout(() => {
-          $col.addClass('is-active');
-          $card.addClass('is-active');
-        }, 250);
+        $col.addClass('is-active');
+        $card.addClass('is-active');
       });
     },
     listenResize: function () {
@@ -32,8 +30,13 @@
 
       if ($el && $el.length) {
         $el.css({
-          height: $el.height(),
+          height: 'auto',
         });
+        setTimeout(() => {
+          $el.css({
+            height: $el.height(),
+          });
+        }, 50);
       }
     },
   };

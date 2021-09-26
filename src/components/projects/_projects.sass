@@ -16,10 +16,12 @@
     align-items: flex-end
     max-width: 390px
     margin-top: 24px
-    background: #2C2B8C
+    margin-right: 15px
+    background: $colorBlue
     padding: 22px 22px 22px 28px
+    transition: background .25s $ease
   &__content
-    padding-right: 20px
+    padding-right: 10px
   &__title
     font-size: 24px
     line-height: (29 / 24)
@@ -42,31 +44,30 @@
       width: 100%
       object-fit: cover
   &__arrow
-    position: relative
-    width: 35px
-    height: 15px
-    color: $colorAccent
-    &::before
-      display: inline-block
-      content: ' '
-      position: absolute
-      top: 50%
-      left: 0
-      right: 2px
-      height: 2px
-      background: $colorAccent
-      transform: translateY(-60%)
-      transition: right .25s $ease
-    .ico
-      position: absolute
-      right: 0
-      top: 0
-      font-size: 15px
-      transition: right .25s $ease
+    margin-left: auto
+
   &:hover
     .projectCard
+      &__panel
+        background: $colorPrimary
       &__arrow
         &::before
           right: 17px
         .ico
           right: 15px
+
++r($lg)
+  .projectCard
+    height: 240px
+    &__panel
+      margin-top: auto
+      margin-left: 18px
+      margin-bottom: 20px
+      padding: 22px 18px 18px 18px
+    &__title
+      font-size: 18px
+      br
+        display: none
+    &__link
+      margin-top: 4px
+      font-size: 14px
