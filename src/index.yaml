@@ -4,7 +4,7 @@ PageList:
   - file: homepage.html
     ready: 80
   - file: city.html
-    ready: 60
+    ready: 80
   - file: events.html
     ready: 10
   - file: ui.html

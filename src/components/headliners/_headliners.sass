@@ -4,6 +4,11 @@
   &__grid
     margin-top: 26px
 
++r($lg)
+  .headliners
+    &__grid
+      margin-top: 8px
+
 .headlinerCard
   position: relative
   z-index: 1
@@ -47,7 +52,26 @@
     font-weight: 500
     color: $colorYellow
     text-transform: uppercase
+    word-spacing: 100vw
   &__description
     font-size: 16px
+    font-weight: 500
     line-height: (20 / 16)
     color: white
+
++r($lg)
+  .headlinerCard
+    height: auto
+    &::after
+      display: none
+    &__cover
+      position: relative
+      height: 220px
+    &__content
+      padding: 0
+      margin-top: 16px
+      padding-right: 12px
+    &__name
+      font-size: 18px
+    &__description
+      font-size: 14px
