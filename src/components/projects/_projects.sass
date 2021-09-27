@@ -1,5 +1,9 @@
 // projects
 .projects
+  &__grid
+    margin: -3px
+    .col
+      padding: 3px
 
 .projectCard
   position: relative
@@ -71,3 +75,16 @@
     &__link
       margin-top: 4px
       font-size: 14px
+
++r($sm)
+  .projects
+    margin-left: -20px
+    margin-right: -20px
+    &__grid
+      margin: -10px
+      .col
+        padding: 10px
+  .projectCard
+    &__panel
+      margin-left: 20px
+      margin-right: 20px
