@@ -1,5 +1,7 @@
 // mainEvent
 .mainEvent
+  position: relative
+  z-index: 2
   background: #2B268E
   color: white
   padding: 64px 0 72px
@@ -11,7 +13,6 @@
     color: $colorYellow
   &__title-wrapper
     position: relative
-
   &__title
     position: relative
     z-index: 2
@@ -22,7 +23,6 @@
     text-transform: uppercase
     .ico
       font-size: 73px
-
   &__image
     position: absolute
     z-index: 1
@@ -35,11 +35,9 @@
     margin-top: 36px
     display: flex
     align-items: flex-end
-
   &__bottom-left
     flex: 0 0 auto
     padding-right: 20px
-
   &__bottom-right
     flex: 0 1 1020px
     margin-left: auto
@@ -47,7 +45,6 @@
   &__locations
     display: flex
     margin: -10px
-
   &__location
     flex: 0 0 20%
     max-width: 20%
@@ -60,13 +57,21 @@
       margin: 10px 0 0
       font-size: 18px
       line-height: 1
-
   &__locations-title
     margin-top: 18px
     font-size: 64px
     font-weight: 500
     line-height: 1
     color: $colorYellow
+
+  &__image-mobile
+    display: none
+    position: absolute
+    top: 0
+    right: 0
+    font-size: 0
+    img
+      max-width: 100%
 
 +r($xl)
   .mainEvent
@@ -92,3 +97,48 @@
     &__locations-title
       margin-top: 10px
       font-size: 34px
+
++r($md)
+  .mainEvent
+    &__image
+      display: none
+    &__image-mobile
+      display: block
+    &__date
+      margin-top: 18px
+      font-size: 24px
+      max-width: 200px
+    &__title
+      font-size: 34px
+      margin-top: 12px
+      .ico
+        font-size: 27px
+    &__bottom-left
+      display: none
+    &__locations
+      flex-wrap: wrap
+      margin: 0
+    &__location
+      position: relative
+      flex-basis: 100%
+      max-width: 100%
+      padding: 0
+      margin-top: 3px
+      padding-left: 56px
+      .ico
+        position: absolute
+        left: 0
+        top: 0
+      p
+        font-size: 14px
+        font-weight: 500
+      &:nth-child(2), &:nth-child(4)
+        .ico
+          left: 14px
+      &:nth-child(3)
+        .ico
+          left: 26px
+    &__locations-title
+      font-size: 24px
+      margin-top: 20px
+      line-height: 1.2

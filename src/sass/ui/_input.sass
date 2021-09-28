@@ -3,19 +3,21 @@
   -webkit-appearance: none
   display: block
   width: 100%
-  background: transparent
+  background: #F4F4F4
   font-family: $systemFont
-  font-size: 16px
+  font-size: 14px
+  font-weight: 500
   color: $fontColor
-  border: 1px solid $borderColor
+  border: 1px solid transparent
   border-radius: 0px
-  padding: 15px 15px
+  padding: 16px 12px
   transition: background
   transition: border .25s $ease, color .25s $ease, background .25s $ease
   &::placeholder
     color: rgba($fontColor, 5)
   &:focus, &:active
     background: white
+    border-color: $borderColor
   &.has-error
     border-color: $colorRed
     &::placeholder

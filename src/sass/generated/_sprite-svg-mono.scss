@@ -1,8 +1,3 @@
-.ico-mono-arrow-fat {
-  width: 0.62em;
-  height: 1em;
-  fill: #E76060;
-}
 .ico-mono-arrow-next {
   width: 0.58em;
   height: 1em;
@@ -18,6 +13,11 @@
   height: 1em;
   fill: #fff;
 }
+.ico-mono-arrow-right {
+  width: 2em;
+  height: 1em;
+  fill: #FF8269;
+}
 .ico-mono-calendar {
   width: 0.95em;
   height: 1em;
@@ -26,7 +26,12 @@
 .ico-mono-caret {
   width: 1.13em;
   height: 1em;
-  fill: #E54323;
+  fill: #1BA4DF;
+}
+.ico-mono-checkbox {
+  width: 1.38em;
+  height: 1em;
+  fill: #fff;
 }
 .ico-mono-close {
   width: 1em;
@@ -37,6 +42,16 @@
   width: 1.4em;
   height: 1em;
   fill: #FFF;
+}
+.ico-mono-like-outline {
+  width: 1.13em;
+  height: 1em;
+  fill: #C7C7C7;
+}
+.ico-mono-like {
+  width: 1.13em;
+  height: 1em;
+  fill: #fff;
 }
 .ico-mono-location-outline {
   width: 0.83em;

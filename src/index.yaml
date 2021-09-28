@@ -4,8 +4,8 @@ PageList:
   - file: homepage.html
     ready: 80
   - file: city.html
-    ready: 60
+    ready: 80
   - file: events.html
-    ready: 10
+    ready: 60
   - file: ui.html
     ready: 100

@@ -1,0 +1,14 @@
+mixin breadcrumbs(crumbs, modifier)
+  // BREADCRUMBS
+  .breadcrumbs(class=modifier ? "breadcrumbs--" + modifier : "")
+    ul.breadcrumbs__list
+      each crumb, index in crumbs
+        li
+          if (index !== crumbs.length - 1)
+            a(href="#" itemprop="item")!= crumb
+          else
+            span!= crumb
+
+    a(href="#").breadcrumbs__mobile
+      +svgMono("arrow")
+      span Назад

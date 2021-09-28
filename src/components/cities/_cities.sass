@@ -70,6 +70,11 @@
 +r($xl)
   .cities
     padding: 20px 0 50px
+    &--compact
+      padding-top: 12px
+      padding-bottom: 24px
+    &__decor
+      display: none
     &__featured
       margin-top: 6px
       font-size: 34px
@@ -86,3 +91,22 @@
         font-size: 18px
       .ico
         font-size: 6px
+
++r($sm)
+  .cities
+    padding-bottom: 32px
+    &__featured
+      font-size: 24px
+      a
+        text-decoration: underline
+        &::after
+          display: none
+        &:hover
+          text-decoration: none
+    &__selector
+      font-size: 16px
+    &__selector-action
+      span
+        font-size: 16px
+      .ico
+        font-size: 5px

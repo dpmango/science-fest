@@ -32,7 +32,6 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
     };
 
     app.refresh = function () {
-      APP.Plugins.Sharer.refresh();
       APP.Plugins.Sliders.reinit();
       app.initPlugins(true);
       app.initComponents(true);
@@ -58,7 +57,6 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.LegacySupport.init();
       APP.Plugins.ScrollBlock.listenScroll();
       APP.Plugins.Clicks.init();
-      APP.Plugins.Barba.init();
 
       if (!APP.Components.Preloader) {
         APP.Plugins.AOS.init();
@@ -76,26 +74,9 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.TextareaAutoExpand.init();
       APP.Plugins.Validations.init();
       APP.Plugins.Tabs.init(fromPjax);
-      APP.Plugins.Table.init(fromPjax);
       APP.Plugins.DatePicker.init(fromPjax);
       APP.Plugins.Upload.init(fromPjax);
       APP.Plugins.LegacySupport.fixImages();
-
-      // APP.Plugins.ScrollReveal.init();
-      // APP.Plugins.Ymaps.init();
-      // APP.Plugins.Countdown.init();
-      // APP.Plugins.FooterReveal.init();
-      // APP.Plugins.ScalerDesktop.init(fromPjax);
-
-      // plugins
-      // APP.Plugins.Sticky.init(fromPjax);
-      // APP.Plugins.Photoswipe.init(fromPjax);
-      // APP.Plugins.DatePicker.init(fromPjax);
-
-      // ui
-      // APP.Plugins.Clipboard.init();
-      // APP.Plugins.InputFocuses.init();
-      // APP.Plugins.Selectric.init();
     };
 
     // All components from `src/componenets`

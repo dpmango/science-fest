@@ -10,7 +10,7 @@ $choices-guttering: 24px !default;
 $choices-padding: 11px !default; // 15 - 4
 $choices-border-radius: 0px !default;
 $choices-border-radius-item: 20px !default;
-$choices-bg-color: transparent !default;
+$choices-bg-color: #f4f4f4 !default;
 $choices-bg-color-disabled: #eaeaea !default;
 $choices-bg-color-dropdown: #ffffff !default;
 $choices-text-color: $fontColor !default;
@@ -95,18 +95,18 @@ $choices-z-index: 1;
   &:after {
     // arrow
     content: '';
-    size: 8px 14.5px;
-    background: svg-load('../icons/svg-mono/arrow-fat.svg') no-repeat center;
+    size: 9px 8px;
+    background: svg-load('../icons/svg-mono/caret.svg') no-repeat center;
     background-size: cover;
     position: absolute;
-    right: 12.5px;
+    right: 20px;
     top: 50%;
-    transform: translateY(-50%) rotate(90deg);
+    transform: translateY(-50%);
     pointer-events: none;
     transition: transform 0.25s $ease;
   }
   &.is-open:after {
-    transform: translateY(-50%) rotate(270deg);
+    transform: translateY(-50%) rotate(180deg);
   }
   &[dir='rtl'] {
     &:after {
