@@ -1,0 +1,56 @@
+// Breadcrumbs
+.breadcrumbs
+  margin: 0px 0
+
+  &__list
+    list-style: none
+    margin: -5px
+    padding: 0
+    li
+      display: inline-block
+      font-size: 14px
+      line-height: 17px
+      margin-left: -2px
+      &:first-child
+        margin-left: 0
+    a, span
+      display: inline-block
+      padding: 5px
+      color: #8C8C8C
+      transition: color .25s $ease
+    a
+      &:hover
+        color: $colorPrimary
+
+    li:not(:last-child)
+      a
+        &::after
+          display: inline-block
+          content: ' '
+          size: 18px 8px
+          background-image: svg-load('../icons/svg-mono/arrow-right.svg')
+          background-repeat: no-repeat
+          background-position: center
+          pointer-events: none
+          margin-left: 8px
+
+  &__mobile
+    display: none
+
++r($sm)
+  .breadcrumbs
+    &__list
+      display: none
+    &__mobile
+      display: flex
+      align-items: center
+      .ico
+        transform: rotate(180deg)
+        color: $colorPrimary
+        font-size: 14px
+      span
+        display: inline-block
+        font-size: 14px
+        line-height: 17px
+        margin-left: 8px
+        color: $colorPrimary

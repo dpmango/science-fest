@@ -1,14 +1,23 @@
 /* UI
 .ui-group
   position: relative
-  margin-bottom: 30px
+  margin-bottom: 20px
   label
     display: block
-    margin-bottom: 12px
+    font-size: 16px
+    font-weight: 500
+    margin-bottom: 7px
     line-height: 1
+    color: $fontColor
   .btn, .ui-upload
     // mind the label space
     margin-top: calc(16px + 12px)
+  .ui-checkbox
+    margin-top: 9px
+    &:last-child
+      margin-bottom: 30px
+  label + .ui-checkbox
+    margin-top: 16px
   .ui-upload
     .btn
       margin-top: 0

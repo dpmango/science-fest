@@ -1,0 +1,60 @@
+// event page
+.event-page
+  background: black
+  margin-top: -1px
+  &__holder
+    background: white
+    border-top-left-radius: 50px
+    border-top-right-radius: 50px
+    padding: 34px 0
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+    margin-top: 26px
+  &__breadcrumbs
+    margin-bottom: 26px
+  &__sidebar
+    flex: 0 0 340px
+    max-width: 340px
+    min-width: 1px
+    min-height: 0
+    padding-right: 26px
+  &__sidebar-section
+    margin-bottom: 45px
+
+  &__sidebar-cta
+    display: flex
+    .btn
+      width: 50%
+      margin-right: 10px
+      padding-left: 10px
+      padding-right: 10px
+      &:last-child
+        margin-right: 0
+
+  &__content
+    flex: 0 0 calc(100% - 340px)
+    max-width: calc(100% - 340px)
+    padding-top: 22px
+    .row
+      margin: -14px
+    .col
+      padding: 14px
+    .eventCard
+      padding-right: 0
+      max-width: 100%
+      margin-bottom: 48px
+
+
+  &__pagination
+    margin-top: 24px
+
+
++r(1320)
+  .event-page
+    &__sidebar
+      flex-basis: 280px
+      max-width: 280px
+    &__content
+      flex: 0 0 calc(100% - 280px)
+      max-width: calc(100% - 280px)
