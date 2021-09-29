@@ -30,7 +30,7 @@ header.header
             .header__action.header__action--location
               +svgMono('location-outline')
               span.header__action-text Москва
-              a(href="#").header__language
+              a(href="#" data-id="cities").header__language.js-open-overlay
                 span Изменить
                 +svgMono('caret')
             a(href="#").header__action
