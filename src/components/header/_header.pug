@@ -46,9 +46,8 @@ header.header
                 span
                 span
 
-
         // menu
-        ul.header__menu
+        ul.header__menu.js-teleport(data-teleport-to="mobilenavi" data-teleport-condition="<992")
           li
             a(href="homepage.html") Новости
           li.has-ul
@@ -141,15 +140,46 @@ header.header
 
 
 
+include ../overlay/_cities.pug
+
+
+
 // MOBILE NAVI
 .mobile-navi
   .mobile-navi__wrapper
-    ul.mobile-navi__menu
-      li
-        a(href="homepage.html") Homepage
-      li
-        a(href="page.html") Shop
-      li
-        a(href="page.html") Lorem
-    .mobile-navi__cta
-      a(href="mailto:sergey@khmelevskoy.co") sergey@khmelevskoy.co
+    .mobile-navi__decor.type-1
+      include ./mobileMenuDecor-1.svg
+    .mobile-navi__decor.type-2
+      include ./mobileMenuDecor-2.svg
+    .mobile-navi__decor.type-3
+      include ./mobileMenuDecor-3.svg
+
+    .mobile-navi__scroller
+      .mobile-navi__cta
+        .header__action.mobile-navi__location
+          +svgMono('location-outline')
+          span.header__action-text Москва
+          a(href="#" data-id="cities").header__language.js-open-overlay
+            span Изменить
+            +svgMono('caret')
+
+        ul.mobile-navi__socials.social-list.social-list--c-primary.js-teleport(data-teleport-condition="<576" data-teleport-to="mobilenaviSocials")
+          li
+            a(href='#')
+              +svgMono('social-facebook')
+          li
+            a(href='#')
+              +svgMono('social-vk')
+          li
+            a(href='#')
+              +svgMono('social-instagram')
+          li
+            a(href='#')
+              +svgMono('social-youtube')
+          li
+            a(href='#')
+              +svgMono('social-tiktok')
+
+      ul.mobile-navi__menu(data-teleport-target="mobilenavi")
+
+      ul.mobile-navi__socials.mobile-navi__socials--sm.social-list.social-list--c-primary(data-teleport-target="mobilenaviSocials")
