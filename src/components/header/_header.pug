@@ -51,14 +51,89 @@ header.header
         ul.header__menu
           li
             a(href="homepage.html") Новости
-          li
-            a(href="page.html") О Фестивале
-          li
-            a(href="page.html") Медиатека
-          li
-            a(href="page.html") Конкурсы
-          li
-            a(href="page.html") Мероприятия
+          li.has-ul
+            a(href="page.html")
+              span О Фестивале
+              +svgMono('caret')
+            ul
+              li
+                a(href="#") Новости
+              li
+                a(href="#") Мероприятия Фестиваля
+              li
+                a(href="#") Оставить отзыв
+              li
+                a(href="#") Частые вопросы
+              li
+                a(href="#") Контакты
+              li
+                a(href="#") Архив
+
+          li.has-ul
+            a(href="page.html")
+              span Медиатека
+              +svgMono('caret')
+            ul
+              li
+                a(href="#") Вся медиатека
+              li
+                a(href="#") Фотогалерея
+              li
+                a(href="#") Видеогалерея
+              li
+                a(href="#") Научно-популярные статьи
+              li
+                a(href="#") Материалы для скачивания
+              li
+                a(href="#") Пресса о нас
+
+          li.has-ul
+            a(href="page.html")
+              span Конкурсы
+              +svgMono('caret')
+            ul
+              li
+                a(href="#") Все конкурсы
+              li
+                a(href="#") Мир науки глазами детей
+              li
+                a(href="#") Ученые будущего
+              li
+                a(href="#") Снимай науку!
+              li
+                a(href="#") Инновационная журналистика
+              li
+                a(href="#") STEM – центры
+          li.has-ul
+            a(href="page.html")
+              span Мероприятия
+              +svgMono('caret')
+            ul
+              li
+                a(href="#") Все мероприятия
+              li
+                a(href="#") Выставки
+              li
+                a(href="#") Лекции
+              li
+                a(href="#") Мастер-классы
+              li
+                a(href="#") Научные шоу
+              li
+                a(href="#") Презентации
+              li
+                a(href="#") Телемосты
+              li
+                a(href="#") Экскурсии
+              li
+                .header__menu-separator
+              li
+                a(href="#") Мероприятия на карте
+              li
+                a(href="#") Онлайн
+              li
+                a(href="#") Офлайн
+
           li
             a(href="page.html") Прессе
           li

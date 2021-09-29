@@ -1,15 +1,27 @@
 // News
 .news
   padding: 72px 0
+  &__title
+    display: flex
+    align-items: center
+    .h2-title
+      padding-right: 24px
+  &__title-cta
+    margin-left: auto
   &__slider
     margin-top: 32px
     .swiper-slide
       flex: 0 0 $col3
       max-width: $col3
+  &__cta
+    display: none
 
 +r($xl)
   .news
     padding: 60px 0
+    &__title
+      .h2-title
+        padding-right: 0
     &__slider
       margin-top: 26px
       margin-left: -30px
@@ -21,6 +33,13 @@
         max-width: 265px
       .swiper-navbar
         display: none
+    &__cta
+      margin-top: 30px
+      display: block
+      .btn
+        width: 100%
+        max-width: 350px
+
 
 +r($lg)
   .news

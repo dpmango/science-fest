@@ -1,6 +1,6 @@
 /* HEADER*/
 .header
-  position: static
+  position: relative
   top: 0
   right: 0
   left: 0
@@ -46,6 +46,7 @@
   &__main-top
     display: flex
     align-items: center
+    padding-left: 12px
 
   &__socials
     padding-right: 24px
@@ -63,9 +64,7 @@
     font-size: 0
     margin-right: 16px
     padding: 5px
-    &--location
-      display: none
-    &:last-child
+    &:last-child, &:nth-last-child(2)
       margin-right: 0
     .ico
       font-size: 15px
@@ -109,25 +108,69 @@
       &::after
         right: 100%
 
+  &__menu-separator
+    height: 1px
+    background: $colorPrimary
+    margin: 12px 10px
+
   &__menu
     flex: 0 1 auto
     display: flex
     align-items: center
-    margin: auto -5px -5px 0
+    margin: auto -12px -12px 0
     padding: 0
     li
+      position: relative
+      z-index: 5
       display: inline-block
       font-size: 16px
       font-weight: 500
       text-transform: uppercase
-      margin-right: 26px
+      margin-right: 5px
       &:last-child
         margin-right: 0
+      &.has-ul
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+        transition: background .25s $ease
+        &:hover
+          background: #2B268E
+          ul
+            pointer-events: all
+            opacity: 1
+      ul
+        position: absolute
+        z-index: 3
+        top: 100%
+        left: 0
+        min-width: 255px
+        padding: 8px 8px
+        margin: 0
+        pointer-events: none
+        opacity: 0
+        background: #2B268E
+        border-radius: 0px 10px 10px 10px
+        transition: opacity .25s $ease
+        li
+          font-size: 16px
+          display: block
+          text-transform: none
+        a
+          padding-top: 7px
+          padding-bottom: 7px
+
     a
-      display: inline-block
-      padding: 5px
+      display: inline-flex
+      align-items: center
+      padding: 12px
       color: white
       transition: color .25s ease
+      .ico
+        font-size: 5px
+        margin-left: 4px
+        color: $colorPrimary
+      span
+        display: inline-block
       &:hover
         color: $colorPrimary
 
@@ -155,7 +198,7 @@
   .header
     &__menu
       li
-        margin-right: 16px
+        margin-right: 0px
 
 +r($xl)
   .header
@@ -169,6 +212,9 @@
         display: none
       .icon-logo-mini
         display: block
+    &__action
+      &--location
+        display: none
     &__menu
       display: none
     &__socials
