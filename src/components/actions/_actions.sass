@@ -5,7 +5,33 @@
   color: white
   &__wrapper
     transform: translateY(-113px)
+  &__decor
+    position: absolute
+    display: none
+    top: 50%
+    font-size: 0
+    pointer-events: none
 
++r($sm)
+  .actions
+    &__decor
+      display: block
+    &__wrapper
+      .col
+        position: relative
+        &:nth-child(odd)
+          .actions__decor
+            right: -20px
+          .actionCard
+            margin-right: 50px
+        &:nth-child(even)
+          .actions__decor
+            left: -20px
+          .actionCard
+            margin-left: 50px
+        &:nth-child(2), &:nth-child(3)
+          .actions__decor
+            top: 40%
 
 .actionCard
   background: #000
@@ -68,3 +94,13 @@
 
 +r($xl)
   .actionCard
+
++r($md)
+  .actionCard
+    min-height: 265px
+    &__content
+      padding: 30px 20px 30px 20px
+    &__title
+      font-size: 18px
+    &__description
+      font-size: 16px

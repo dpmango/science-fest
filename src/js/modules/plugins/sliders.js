@@ -8,6 +8,7 @@
         events: undefined,
         upevents: undefined,
         news: undefined,
+        headliners: undefined,
       },
       responsiveSwipers: {
         backstageSwiper: {
@@ -143,6 +144,17 @@
         'news',
         {
           loop: true,
+          spaceBetween: 0,
+          slidesPerView: 'auto',
+        },
+        { navigation: true, pagination: true }
+      );
+
+      // headliners
+      this.data.swipers.headliners = _this.utils.buildSwiper(
+        'headliners',
+        {
+          loop: false,
           spaceBetween: 0,
           slidesPerView: 'auto',
         },
