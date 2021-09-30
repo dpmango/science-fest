@@ -5,6 +5,7 @@
   APP.Plugins.Sliders = {
     data: {
       swipers: {
+        mainEvent: undefined,
         events: undefined,
         upevents: undefined,
         news: undefined,
@@ -116,6 +117,17 @@
     },
     initSwipers: function () {
       var _this = this;
+
+      // mainEvent
+      this.data.swipers.mainEvent = _this.utils.buildSwiper(
+        'mainEvent',
+        {
+          loop: true,
+          spaceBetween: 0,
+          slidesPerView: 'auto',
+        },
+        { navigation: true, pagination: true }
+      );
 
       //events
       this.data.swipers.events = _this.utils.buildSwiper(
