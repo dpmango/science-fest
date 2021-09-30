@@ -45,6 +45,11 @@
           &::after
             display: none
 
++r($sm)
+  .greetings
+    &__grid
+      padding-top: 0px
+
 .greetingCard
   position: relative
   flex: 1 0 auto
@@ -210,3 +215,26 @@
           height: 100%
           margin-top: 48px
 
+
++r($sm)
+  .greetingCard
+    padding-bottom: 16px
+    &__author
+      margin-top: 0
+    &__author-name
+      font-size: 14px
+      word-spacing: 100vw
+    &__author-position
+      font-size: 12px
+    &__content
+      padding-right: 0
+    &__mob-arrow
+      top: 22px
+      right: 14px
+    &.is-active
+      padding-bottom: 16px
+      .greetingCard
+        &__content
+          padding-right: 0
+        &__text
+          margin-top: 16px
