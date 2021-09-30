@@ -13,7 +13,9 @@
       $('.js-open-overlay').removeClass('is-active');
       $('.overlay').removeClass('is-active');
       if (withClose) {
-        APP.Plugins.ScrollBlock.enableScroll();
+        if ($('.js-hamburger.is-active').length === 0) {
+          APP.Plugins.ScrollBlock.enableScroll();
+        }
       }
     },
     eventListeners: function () {

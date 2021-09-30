@@ -52,6 +52,9 @@
             APP.Plugins.ScrollBlock.disableScroll();
           } else {
             APP.Plugins.ScrollBlock.enableScroll();
+
+            APP.Components.Events.closeFilters();
+            APP.Components.Overlay.closeOverlays();
           }
         })
         .on('click', '.mobile-navi__menu .has-ul', function (e) {
@@ -141,7 +144,7 @@
     controlHeaderClass: function () {
       this.data.header.container.attr('data-modifier', false);
 
-      var $modifierElement = $('.page').last().find('[js-header-class]');
+      var $modifierElement = $('.page').last().find('.js-header-class');
 
       if ($modifierElement.length > 0) {
         this.data.header.container.attr('data-modifier', $modifierElement.data('class'));

@@ -7,11 +7,6 @@ APP.Browser = APP.Browser || {};
 APP.Plugins = APP.Plugins || {};
 APP.Components = APP.Components || {};
 
-// force scroll to top on initial load
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
-
 // shorthand operators
 var _window = $(window);
 var _document = $(document);
@@ -84,6 +79,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Components.Header.init(fromPjax);
       APP.Components.Greetings.init(fromPjax);
       APP.Components.Overlay.init(fromPjax);
+      APP.Components.Events.init(fromPjax);
     };
 
     return app;

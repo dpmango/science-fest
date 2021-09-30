@@ -11,166 +11,181 @@ include ../breadcrumbs/_breadcrumbs
       h1.h2-title.c-accent Мероприятия
       .event-page__wrapper
         // sidebar
-        .event-page__sidebar
-          form(action="#")
-            // section
-            .event-page__sidebar-section
-              .ui-group
-                label(for="categories") Смотреть категории
-                select.js-choices.ui-input(id="categories")
-                  option() Все
-                  option() Категория 1
-                  option() Категория 1
+        .event-page__sidebar.filters
+          .filters__toggle.js-filters-toggle
+            +svgMono('filters')
+            .filters__toggle-text Фильтры
+            .filters__toggle-count
+              span 2
 
-              .ui-group
-                label(for="event_name") Название мероприятия
-                input.ui-input(type="text" id="event_name")
+          form(action="#").filters__form
+            .filters__form-head
+              .filters__form-title Фильтры
+              .filters__form-close.js-filters-close
+                +svgMono('close')
 
-              .ui-group
-                label(for="city") Выбрать город
-                select.js-choices.ui-input(id="city" placeholder="Выберите")
-                  option() Все
-                  option() Категория 1
-                  option() Категория 1
+            .filters__form-wrapper
+              // section
+              .event-page__sidebar-section
+                .ui-group
+                  label(for="categories") Смотреть категории
+                  select.js-choices.ui-input(id="categories")
+                    option() Все
+                    option() Категория 1
+                    option() Категория 1
 
-              .event-page__sidebar-cta
-                button(type="submit").btn.btn-filled.btn--sm Применить
-                button(type="button").btn.btn-primary.btn-primary--white.btn--sm Очистить
+                .ui-group
+                  label(for="event_name") Название мероприятия
+                  input.ui-input(type="text" id="event_name")
 
-            // section
-            .event-page__sidebar-section
-              .ui-group
-                label Формат:
-                .ui-checkbox
-                  input(id="format_1" type="checkbox" name="format")
-                  label(for="format_1")
-                    span Онлайн
-                .ui-checkbox
-                  input(id="format_1" type="checkbox" name="format")
-                  label(for="format_1")
-                    span Оффлайн
+                .ui-group
+                  label(for="city") Выбрать город
+                  select.js-choices.ui-input(id="city" placeholder="Выберите")
+                    option() Все
+                    option() Категория 1
+                    option() Категория 1
 
-              .ui-group
-                label Область знаний:
-                .ui-checkbox
-                  input(id="topic_1" type="checkbox" name="topic")
-                  label(for="topic_1")
-                    span Биология и науки о Жизни
-                .ui-checkbox
-                  input(id="topic_2" type="checkbox" name="topic")
-                  label(for="topic_2")
-                    span Гуманитарные науки
-                .ui-checkbox
-                  input(id="topic_3" type="checkbox" name="topic")
-                  label(for="topic_3")
-                    span Другое
-                .ui-checkbox
-                  input(id="topic_4" type="checkbox" name="topic")
-                  label(for="topic_4")
-                    span Математика и информатика
-                .ui-checkbox
-                  input(id="topic_5" type="checkbox" name="topic")
-                  label(for="topic_5")
-                    span Науки о Земле
-                .ui-checkbox
-                  input(id="topic_6" type="checkbox" name="topic")
-                  label(for="topic_6")
-                    span Общественные науки
-                .ui-checkbox
-                  input(id="topic_7" type="checkbox" name="topic")
-                  label(for="topic_7")
-                    span Техника и инженерные науки
-                .ui-checkbox
-                  input(id="topic_8" type="checkbox" name="topic")
-                  label(for="topic_8")
-                    span Физика и астрономия
-                .ui-checkbox
-                  input(id="topic_9" type="checkbox" name="topic")
-                  label(for="topic_9")
-                    span Химия и нанотехнологии
+                .event-page__sidebar-cta
+                  button(type="submit").btn.btn-filled.btn--sm Применить
+                  button(type="button").btn.btn-primary.btn-primary--white.btn--sm Очистить
 
-              .ui-group
-                label Тип мероприятия:
-                .ui-checkbox
-                  input(id="type_1" type="checkbox" name="type")
-                  label(for="type_1")
-                    span Лекция
-                .ui-checkbox
-                  input(id="type_2" type="checkbox" name="type")
-                  label(for="type_2")
-                    span Презентация
-                .ui-checkbox
-                  input(id="type_3" type="checkbox" name="type")
-                  label(for="type_3")
-                    span Мастер-класс
-                .ui-checkbox
-                  input(id="type_4" type="checkbox" name="type")
-                  label(for="type_4")
-                    span День открытых дверей
-                .ui-checkbox
-                  input(id="type_5" type="checkbox" name="type")
-                  label(for="type_5")
-                    span Экскурсия
-                .ui-checkbox
-                  input(id="type_6" type="checkbox" name="type")
-                  label(for="type_6")
-                    span Фильм
-                .ui-checkbox
-                  input(id="type_7" type="checkbox" name="type")
-                  label(for="type_7")
-                    span Концерт, научное шоу
-                .ui-checkbox
-                  input(id="type_8" type="checkbox" name="type")
-                  label(for="type_8")
-                    span Конкурс
-                .ui-checkbox
-                  input(id="type_9" type="checkbox" name="type")
-                  label(for="type_9")
-                    span Конференция, научная школа
-                .ui-checkbox
-                  input(id="type_10" type="checkbox" name="type")
-                  label(for="type_10")
-                    span Круглый стол
-                .ui-checkbox
-                  input(id="type_11" type="checkbox" name="type")
-                  label(for="type_11")
-                    span Олимпиада
-                .ui-checkbox
-                  input(id="type_12" type="checkbox"  name="type")
-                  label(for="type_12")
-                    span Семинар
+                .event-page__sidebar-cta.event-page__sidebar-cta--bottom
+                  button(type="submit").btn.btn-filled.btn--sm Применить
+                  button(type="button").btn.btn-primary.btn-primary--white.btn--sm Очистить
 
+              // section
+              .event-page__sidebar-section
+                .ui-group
+                  label Формат:
+                  .ui-checkbox
+                    input(id="format_1" type="checkbox" name="format")
+                    label(for="format_1")
+                      span Онлайн
+                  .ui-checkbox
+                    input(id="format_1" type="checkbox" name="format")
+                    label(for="format_1")
+                      span Оффлайн
 
-              .ui-group
-                label Целевая аудитория
-                .ui-checkbox
-                  input(id="aud_1" type="checkbox" name="aud")
-                  label(for="aud_1")
-                    span Абитуриенты
-                .ui-checkbox
-                  input(id="aud_2" type="checkbox" name="aud")
-                  label(for="aud_2")
-                    span Будет интересно всем
-                .ui-checkbox
-                  input(id="aud_3" type="checkbox" name="aud")
-                  label(for="aud_3")
-                    span Взрослые
-                .ui-checkbox
-                  input(id="aud_4" type="checkbox" name="aud")
-                  label(for="aud_4")
-                    span Специалисты
-                .ui-checkbox
-                  input(id="aud_5" type="checkbox" name="aud")
-                  label(for="aud_5")
-                    span Студенты
-                .ui-checkbox
-                  input(id="aud_6" type="checkbox" name="aud")
-                  label(for="aud_6")
-                    span Школьники
+                .ui-group
+                  label Область знаний:
+                  .ui-checkbox
+                    input(id="topic_1" type="checkbox" name="topic")
+                    label(for="topic_1")
+                      span Биология и науки о Жизни
+                  .ui-checkbox
+                    input(id="topic_2" type="checkbox" name="topic")
+                    label(for="topic_2")
+                      span Гуманитарные науки
+                  .ui-checkbox
+                    input(id="topic_3" type="checkbox" name="topic")
+                    label(for="topic_3")
+                      span Другое
+                  .ui-checkbox
+                    input(id="topic_4" type="checkbox" name="topic")
+                    label(for="topic_4")
+                      span Математика и информатика
+                  .ui-checkbox
+                    input(id="topic_5" type="checkbox" name="topic")
+                    label(for="topic_5")
+                      span Науки о Земле
+                  .ui-checkbox
+                    input(id="topic_6" type="checkbox" name="topic")
+                    label(for="topic_6")
+                      span Общественные науки
+                  .ui-checkbox
+                    input(id="topic_7" type="checkbox" name="topic")
+                    label(for="topic_7")
+                      span Техника и инженерные науки
+                  .ui-checkbox
+                    input(id="topic_8" type="checkbox" name="topic")
+                    label(for="topic_8")
+                      span Физика и астрономия
+                  .ui-checkbox
+                    input(id="topic_9" type="checkbox" name="topic")
+                    label(for="topic_9")
+                      span Химия и нанотехнологии
 
-              .event-page__sidebar-cta
-                button(type="submit").btn.btn-filled.btn--sm Применить
-                button(type="button").btn.btn-primary.btn-primary--white.btn--sm Очистить
+                .ui-group
+                  label Тип мероприятия:
+                  .ui-checkbox
+                    input(id="type_1" type="checkbox" name="type")
+                    label(for="type_1")
+                      span Лекция
+                  .ui-checkbox
+                    input(id="type_2" type="checkbox" name="type")
+                    label(for="type_2")
+                      span Презентация
+                  .ui-checkbox
+                    input(id="type_3" type="checkbox" name="type")
+                    label(for="type_3")
+                      span Мастер-класс
+                  .ui-checkbox
+                    input(id="type_4" type="checkbox" name="type")
+                    label(for="type_4")
+                      span День открытых дверей
+                  .ui-checkbox
+                    input(id="type_5" type="checkbox" name="type")
+                    label(for="type_5")
+                      span Экскурсия
+                  .ui-checkbox
+                    input(id="type_6" type="checkbox" name="type")
+                    label(for="type_6")
+                      span Фильм
+                  .ui-checkbox
+                    input(id="type_7" type="checkbox" name="type")
+                    label(for="type_7")
+                      span Концерт, научное шоу
+                  .ui-checkbox
+                    input(id="type_8" type="checkbox" name="type")
+                    label(for="type_8")
+                      span Конкурс
+                  .ui-checkbox
+                    input(id="type_9" type="checkbox" name="type")
+                    label(for="type_9")
+                      span Конференция, научная школа
+                  .ui-checkbox
+                    input(id="type_10" type="checkbox" name="type")
+                    label(for="type_10")
+                      span Круглый стол
+                  .ui-checkbox
+                    input(id="type_11" type="checkbox" name="type")
+                    label(for="type_11")
+                      span Олимпиада
+                  .ui-checkbox
+                    input(id="type_12" type="checkbox"  name="type")
+                    label(for="type_12")
+                      span Семинар
+
+                .ui-group
+                  label Целевая аудитория
+                  .ui-checkbox
+                    input(id="aud_1" type="checkbox" name="aud")
+                    label(for="aud_1")
+                      span Абитуриенты
+                  .ui-checkbox
+                    input(id="aud_2" type="checkbox" name="aud")
+                    label(for="aud_2")
+                      span Будет интересно всем
+                  .ui-checkbox
+                    input(id="aud_3" type="checkbox" name="aud")
+                    label(for="aud_3")
+                      span Взрослые
+                  .ui-checkbox
+                    input(id="aud_4" type="checkbox" name="aud")
+                    label(for="aud_4")
+                      span Специалисты
+                  .ui-checkbox
+                    input(id="aud_5" type="checkbox" name="aud")
+                    label(for="aud_5")
+                      span Студенты
+                  .ui-checkbox
+                    input(id="aud_6" type="checkbox" name="aud")
+                    label(for="aud_6")
+                      span Школьники
+
+                .event-page__sidebar-cta.event-page__sidebar-cta--mobile
+                  button(type="submit").btn.btn-filled.btn--sm Применить
+                  button(type="button").btn.btn-primary.btn-primary--white.btn--sm Очистить
 
 
         // content

@@ -194,6 +194,10 @@
     transition: transform .25s ease
     transform: translate3d(0,-100%,0) !important
 
+  &[data-modifier="no-bb"]
+    .header__wrapper::after
+      display: none
+
 +r(1280)
   .header
     &__menu
