@@ -20,6 +20,12 @@
       var _this = this;
 
       _document
+        .on('click', '.eventCard__like', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          $(this).toggleClass('is-active');
+        })
         .on('click', '.js-filters-toggle', function () {
           var $link = $(this);
           var $form = $('.filters__form');
