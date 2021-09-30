@@ -21,45 +21,47 @@
 
     // section
     .partners__section
-      .row.partners__row.partners__row--sub
-        .partners__col.col-1-5.col-lg-12
+      .row.partners__row
+        .partners__col.col-2-5.col-lg-12
           h5.h5-title.c-accent Генеральные партнёры
-        .partners__col.col-1-5.col-lg-12
-        .partners__col.col-1-5.col-lg-12
-          h5.h5-title.c-accent При поддержке
-        .partners__col.col-1-5.col-lg-12
-        .partners__col.col-1-5.col-lg-12
-          h5.h5-title.c-accent Стратегический партнёр
+          .row.partners__row.partners__row--sub
+            .partners__col.col-6.col-lg-6
+              .partners__card.partners__card--bl
+                img(src='img/partners/gen-1.png' srcset='img/partners/gen-1@2x.png 2x')
+            .partners__col.col-6.col-lg-6
+              .partners__card
+                img(src='img/partners/gen-2.png' srcset='img/partners/gen-2@2x.png 2x')
 
-      .row.partners__row.partners__row--sub
-        .partners__col.col-1-5.col-lg-6
-          .partners__card.partners__card--bl
-            img(src='img/partners/gen-1.png' srcset='img/partners/gen-1@2x.png 2x')
-        .partners__col.col-1-5.col-lg-6
-          .partners__card
-            img(src='img/partners/gen-2.png' srcset='img/partners/gen-2@2x.png 2x')
-        .partners__col.col-1-5.col-lg-6
-          .partners__card.partners__card--bl
-            img(src='img/partners/gen-3.png' srcset='img/partners/gen-3@2x.png 2x')
-        .partners__col.col-1-5.col-lg-6
-          .partners__card
-            img(src='img/partners/gen-4.png' srcset='img/partners/gen-4@2x.png 2x')
+        .partners__col.col-2-5.col-lg-12
+          h5.h5-title.c-accent.mt-lg-1 При поддержке
+          .row.partners__row.partners__row--sub
+            .partners__col.col-6.col-lg-6
+              .partners__card.partners__card--bl
+                img(src='img/partners/gen-3.png' srcset='img/partners/gen-3@2x.png 2x')
+            .partners__col.col-6.col-lg-6
+              .partners__card
+                img(src='img/partners/gen-4.png' srcset='img/partners/gen-4@2x.png 2x')
+
         .partners__col.col-1-5.col-lg-12
-          .partners__card.partners__card--bl
-            img(src='img/partners/gen-5.png' srcset='img/partners/gen-5@2x.png 2x')
+          h5.h5-title.c-accent.mt-lg-1 Стратегический партнёр
+          .row.partners__row.partners__row--sub
+            .partners__col.col-12
+              .partners__card.partners__card--bl
+                img(src='img/partners/gen-5.png' srcset='img/partners/gen-5@2x.png 2x')
+
 
     // section
     .partners__section
       h5.h5-title.c-accent Официальные партнёры
 
       .row.partners__row.partners__row--sub
-        .partners__col.col-4.col-sm-12
+        .partners__col.col-4.col-sm-6
           .partners__card.partners__card--bl
             img(src='img/partners/off-1.png' srcset='img/partners/off-1@2x.png 2x')
         .partners__col.col-4.col-sm-6
           .partners__card
             img(src='img/partners/off-2.png' srcset='img/partners/off-2@2x.png 2x')
-        .partners__col.col-4.col-sm-6
+        .partners__col.col-4.col-sm-12
           .partners__card
             img(src='img/partners/off-3.png' srcset='img/partners/off-3@2x.png 2x')
 
