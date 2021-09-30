@@ -1,10 +1,14 @@
 // mainEvent
 .mainEvent
-  position: relative
-  z-index: 2
   background: #2B268E
   color: white
-  padding: 64px 0 72px
+  .swiper-navbar
+    margin-bottom: 32px
+    margin-top: 0
+  &__slide
+    position: relative
+    z-index: 2
+    padding: 64px 0 72px
   &__date
     margin-top: 18px
     font-size: 64px
@@ -75,7 +79,8 @@
 
 +r($xl)
   .mainEvent
-    padding: 24px 0
+    &__slide
+      padding: 24px 0
     &__date
       margin-top: 10px
       font-size: 34px

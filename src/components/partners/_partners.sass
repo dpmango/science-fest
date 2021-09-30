@@ -9,7 +9,8 @@
     &--main
       margin-top: 46px
     &--sub
-      margin-top: 26px
+      margin-top: auto
+      padding-top: 26px
   &__col
     display: flex
     flex-direction: column
@@ -36,11 +37,26 @@
       &--main
         margin-top: 18px
       &--sub
-        margin-top: 18px
+        padding-top: 18px
     &__card
       min-height: 102px
+      &--bl
+        border-left-color: $borderColor
 
 +r($sm)
   .partners
+    &__row
+      &--sub
+        margin-top: 18px
+        padding-top: 0
+      &--main, &--sub
+        border: 1px solid $borderColor
+      &--main
+        .partners__card
+          border-bottom: 1px solid $borderColor
+        .partners__col
+          &:last-child
+            .partners__card
+              border-bottom: 0
     &__card
-      border-left-color: $borderColor
+      border: 0

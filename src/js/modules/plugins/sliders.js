@@ -5,9 +5,11 @@
   APP.Plugins.Sliders = {
     data: {
       swipers: {
+        mainEvent: undefined,
         events: undefined,
         upevents: undefined,
         news: undefined,
+        headliners: undefined,
       },
       responsiveSwipers: {
         backstageSwiper: {
@@ -116,6 +118,17 @@
     initSwipers: function () {
       var _this = this;
 
+      // mainEvent
+      this.data.swipers.mainEvent = _this.utils.buildSwiper(
+        'mainEvent',
+        {
+          loop: true,
+          spaceBetween: 0,
+          slidesPerView: 'auto',
+        },
+        { navigation: true, pagination: true }
+      );
+
       //events
       this.data.swipers.events = _this.utils.buildSwiper(
         'events',
@@ -143,6 +156,17 @@
         'news',
         {
           loop: true,
+          spaceBetween: 0,
+          slidesPerView: 'auto',
+        },
+        { navigation: true, pagination: true }
+      );
+
+      // headliners
+      this.data.swipers.headliners = _this.utils.buildSwiper(
+        'headliners',
+        {
+          loop: false,
           spaceBetween: 0,
           slidesPerView: 'auto',
         },

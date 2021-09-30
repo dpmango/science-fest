@@ -1,7 +1,10 @@
 // News events
 .news.section-dark
   .container
-    h2.h2-title.c-accent Новости науки
+    .news__title
+      h2.h2-title.c-accent Новости науки
+      .news__title-cta.js-teleport(data-teleport-condition="<1200" data-teleport-to="newsCta")
+        a(href="#").btn.btn-primary Все новости
 
     .news__slider.swiper-container.js-swiper-news
       .swiper-wrapper
@@ -53,3 +56,6 @@
         .swiper-pagination.swiper-news-pagination
         .swiper-next.swiper-news-next
           +svgMono('arrow-next')
+
+    .news__cta(data-teleport-target="newsCta")
+

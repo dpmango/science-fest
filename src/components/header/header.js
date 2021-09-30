@@ -17,7 +17,7 @@
     init: function (fromPjax) {
       if (!fromPjax) {
         this.getHeaderParams();
-        this.hamburgerClickListener();
+        this.clickListeners();
         // this.listenScroll();
         // this.listenResize();
       }
@@ -42,17 +42,36 @@
 
       APP.Plugins.ScrollBlock.enableScroll();
     },
-    hamburgerClickListener: function () {
-      _document.on('click', '.js-hamburger', function () {
-        $(this).toggleClass('is-active');
-        $('.mobile-navi').toggleClass('is-active');
+    clickListeners: function () {
+      _document
+        .on('click', '.js-hamburger', function () {
+          $(this).toggleClass('is-active');
+          $('.mobile-navi').toggleClass('is-active');
 
-        if ($(this).is('.is-active')) {
-          APP.Plugins.ScrollBlock.disableScroll();
-        } else {
-          APP.Plugins.ScrollBlock.enableScroll();
-        }
-      });
+          if ($(this).is('.is-active')) {
+            APP.Plugins.ScrollBlock.disableScroll();
+          } else {
+            APP.Plugins.ScrollBlock.enableScroll();
+
+            APP.Components.Events.closeFilters();
+            APP.Components.Overlay.closeOverlays();
+          }
+        })
+        .on('click', '.mobile-navi__menu .has-ul', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          var $link = $(this);
+          var $ul = $link.find('ul');
+
+          if ($link.is('.is-active')) {
+            $link.removeClass('is-active');
+            $ul.slideUp();
+          } else {
+            $link.addClass('is-active');
+            $ul.slideDown();
+          }
+        });
     },
     // listenScroll: function () {
     //   _window.on('scroll', this.scrollHeader.bind(this));
@@ -125,7 +144,7 @@
     controlHeaderClass: function () {
       this.data.header.container.attr('data-modifier', false);
 
-      var $modifierElement = $('.page').last().find('[js-header-class]');
+      var $modifierElement = $('.page').last().find('.js-header-class');
 
       if ($modifierElement.length > 0) {
         this.data.header.container.attr('data-modifier', $modifierElement.data('class'));
