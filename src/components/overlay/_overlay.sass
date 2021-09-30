@@ -27,6 +27,14 @@
     border-radius: 10px
     color: white
     padding: 60px 36px 32px
+    &--search
+      flex-direction: row
+      max-width: 900px
+      padding: 24px
+      margin-left: auto
+      height: auto
+      .overlay__close
+        top: 27px
   &__scroller
     flex: 1 1 auto
     min-height: 0
@@ -45,6 +53,29 @@
       font-size: 24px
     &:hover
       color: rgba(white, .7)
+  &__search
+    display: flex
+    width: 100%
+    padding-right: 56px
+    input
+      -webkit-appearance: none
+      flex: 1 1 auto
+      display: block
+      border: 0
+      box-shadow: none
+      font-size: 14px
+      line-height: 100%
+      color: #A2A2A2
+      padding: 15px 14px
+      background: white
+      margin-right: 10px
+      border: 2px solid transparent
+      transition: border .25s $ease
+      &:focus, &:active
+        background: white
+        border-color: $colorBlue
+    button
+      flex: 0 0 auto
   &__cities
     .col
       display: flex
@@ -58,3 +89,8 @@
       &:hover
         color: rgba(white, .5)
 
+
++r($md)
+  .overlay
+    &__wrapper
+      padding: 40px 20px 32px

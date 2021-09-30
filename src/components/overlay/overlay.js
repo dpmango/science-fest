@@ -25,6 +25,8 @@
         .on('click', '.js-open-overlay', function () {
           var $link = $(this);
           var $target = $('.overlay[data-overlay-id="' + $link.data('id') + '"]');
+          if ($target.length === 0) return;
+
           var targetBound = $link[0].getBoundingClientRect();
 
           _this.closeOverlays();
@@ -32,7 +34,10 @@
           const top = targetBound.top + targetBound.height;
 
           $target.find('.overlay__content').css({ top: top });
-          $target.find('.overlay__wrapper').css({ height: window.innerHeight - top });
+
+          if ($target.data('set-height') !== undefined) {
+            $target.find('.overlay__wrapper').css({ height: window.innerHeight - top });
+          }
 
           $link.addClass('is-active');
           $target.addClass('is-active');

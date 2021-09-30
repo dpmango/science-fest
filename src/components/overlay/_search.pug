@@ -1,0 +1,11 @@
+// Overlay
+.overlay(data-overlay-id="search")
+  .overlay__bg
+  .overlay__content
+    .container
+      .overlay__wrapper.overlay__wrapper--search
+        form(action="#").overlay__search
+          input(type="search" placeholder="Введите поисковый запрос")
+          button(type="submit").btn.btn-primary.btn-primary--b-white.btn--sm Поиск
+        .overlay__close
+          +svgMono('close')

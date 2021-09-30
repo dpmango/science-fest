@@ -33,7 +33,7 @@ header.header
               a(href="#" data-id="cities").header__language.js-open-overlay
                 span Изменить
                 +svgMono('caret')
-            a(href="#").header__action
+            a(href="#" data-id="search").header__action.js-open-overlay
               +svgMono('search')
               span.header__action-text Поиск
             a(href="#").header__action
@@ -141,6 +141,8 @@ header.header
 
 
 include ../overlay/_cities.pug
+include ../overlay/_search.pug
+
 
 
 
