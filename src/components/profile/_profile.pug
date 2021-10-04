@@ -23,12 +23,36 @@ include ../breadcrumbs/_breadcrumbs
 
         // NEXT TAB (Profile)
         .js-tab(data-tab="profile" style="display: block")
+          .profile__section
+            .profileInfo
+              .profileInfo__avatar
+                img(src='img/profile/avatar.png')
+              .profileInfo__content
+                .profileInfo__head
+                  .profileInfo__name Иванов Иван Иванович
+                  a(href="#").profileInfo__edit
+                    +svgMono('edit')
+                    span Редактировать профиль
+                .profileInfo__contacts
+                  .profileInfo__contact
+                    .profileInfo__contact-icon
+                      +svgMono('user')
+                    .profileInfo__contact-content Студент
+                  .profileInfo__contact
+                    .profileInfo__contact-icon
+                      +svgMono('email')
+                    .profileInfo__contact-content ivan.ivanov@gmail.com
+                  .profileInfo__contact
+                    .profileInfo__contact-icon
+                      +svgMono('location-outline')
+                    .profileInfo__contact-content Россия, Московская область
+
           // note
           .profile__section
             h4.h4-title.c-accent Объявление
 
             .profileNote
-              .wysiwyg.mt-1
+              .wysiwyg
                 h4 Уважаемые участники конкурса детского рисунка!
                 p Здесь показаны все рисунки, которые Вы отправили на конкурс «Мир науки глазами детей».
                 p Работы на конкурс принимаются до 12 сентября 2021 года включительно.

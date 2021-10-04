@@ -1,6 +1,6 @@
 // profile
 .profile
-  margin-top: 32px
+  margin-top: 24px
   &__section
     margin: 60px 0
   &__tabs
@@ -25,19 +25,33 @@
       font-size: 24px
       font-weight: 500
       color: $colorPrimary
-      border-bottom: 2px dashed currentColor
-      transition: color .25s $ease
+      transition: color .25s $ease, border .25s $ease
+      &::after
+        display: inline-block
+        content: ' '
+        position: absolute
+        bottom: 0
+        left: 5px
+        right: 5px
+        height: 2px
+        border-bottom: 2px dashed currentColor
+        transition: right .15s ease-out
+        will-change: right
+      &:hover
+        &::after
+          right: 100%
+
     &--width-auto
       width: auto
+      margin-left: -5px
       li
-        margin-right: 50px
+        margin-right: 30px
     li
       &.is-active
         a
           color: $colorAccent
-
-
-
+          &::after
+            right: 100%
 
   &__slider
     margin-top: 32px
@@ -74,6 +88,8 @@
       //   flex: 0 0 225px
       //   max-width: 225px
 
+
+// PROFILE COMPONENTS
 .profileNote
   margin-top: 18px
   background: #E3F2F8
@@ -81,3 +97,64 @@
   padding: 44px 26px 36px
   p
     color: #5F5E5E
+
+
+.profileInfo
+  display: flex
+  &__avatar
+    position: relative
+    overflow: hidden
+    flex: 0 0 112px
+    max-width: 112px
+    height: 112px
+    display: flex
+    flex-direction: column
+    img
+      flex: 1 1 auto
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__content
+    padding-left: 36px
+  &__head
+    display: flex
+    align-items: center
+  &__name
+    font-size: 24px
+    font-weight: 500
+  &__edit
+    margin-left: 32px
+    display: inline-flex
+    align-items: center
+    color: $colorPrimary
+    transition: color .25s $ease
+    .ico
+      color: $colorAccent
+      font-size: 20px
+      margin-right: 8px
+    span
+      font-size: 16px
+      font-weight: 500
+    &:hover
+      color: $colorAccent
+
+
+  &__contacts
+    margin: 16px 0
+    display: flex
+    flex-direction: column
+
+  &__contact
+    margin-bottom: 15px
+    display: inline-flex
+    align-items: center
+    &:last-child
+      margin-bottom: 0
+    &-icon
+      flex: 0 0 20px
+      color: $colorAccent
+      font-size: 16px
+      margin-right: 4px
+    &-content
+      font-size: 16px
+      font-weight: 500
