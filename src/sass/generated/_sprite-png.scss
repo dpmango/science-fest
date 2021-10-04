@@ -1,11 +1,20 @@
 $sprite: (
+	auth-google: (
+		offset-x: 0px,
+		offset-y: -143px,
+		width: 34px,
+		height: 34px,
+		total-width: 204px,
+		total-height: 177px,
+		image: '../img/sprite.png'
+	),
 	logo-mini: (
 		offset-x: 0px,
 		offset-y: -103px,
 		width: 118px,
 		height: 30px,
 		total-width: 204px,
-		total-height: 133px,
+		total-height: 177px,
 		image: '../img/sprite.png'
 	),
 	logo: (
@@ -14,7 +23,7 @@ $sprite: (
 		width: 204px,
 		height: 93px,
 		total-width: 204px,
-		total-height: 133px,
+		total-height: 177px,
 		image: '../img/sprite.png'
 	),
 );
@@ -73,6 +82,9 @@ $sprite: (
 
 
 
+	.icon-auth-google {
+		@include sprite(auth-google)
+	}
 	.icon-logo-mini {
 		@include sprite(logo-mini)
 	}

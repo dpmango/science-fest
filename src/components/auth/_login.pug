@@ -1,0 +1,59 @@
+include ../breadcrumbs/_breadcrumbs
+
+// Auth page
+.iPage
+  .iPage__holder
+    .container
+      .iPage__breadcrumbs
+        +breadcrumbs(['Главная', 'Авторизация'])
+      h1.h2-title.c-accent Авторизация
+
+      // auth
+      .auth
+        .auth__form
+          form(action="").js-validate-form
+            .social-login
+              .social-login__label Авторизоваться через соцсеть:
+              ul.social-login__list
+                li
+                  a(href="#")
+                    +svgColor('auth-fb')
+                li
+                  a(href="#")
+                    +svgColor('auth-vk')
+                li
+                  a(href="#")
+                    i.icon.icon-auth-google
+            .row.mt-2
+              .col.col-12.col-lg-6.col-sm-12
+                .ui-group
+                  label(for="login") Email
+                  input.ui-input(type="email" id="login" required)
+
+              .col.col-12.col-lg-6.col-sm-12
+                .ui-group
+                  label(for="password") Пароль
+                  input.ui-input(type="password" id="password" required)
+
+
+            .auth__btns
+              button(type="submit").btn.btn-filled.btn--sm Войти
+              .auth__recover-link
+                a(href="#") Забыли пароль?
+            .auth__btns.mt-2
+              a(href="/signup.html").btn.btn-primary.btn-primary--white.btn--sm Регистрация
+
+        .auth__content.mt-lg-2
+          .auth__info.js-stick-to-window(data-position="right" data-stop="<992")
+            .auth__info-content
+              .auth__info-body
+                .wysiwyg
+                  h3.f-400 Уважаемые гости Фестиваля науки,
+                  p в этом году формат наших мероприятий — смешанный: мы готовы приветствовать вас не только на наших оффлайн-площадках по всей стране, но и в виртуальном пространстве!
+                  p На нашем сайте вы можете найти информацию о предстоящих лекциях, научных шоу и экскурсиях, а также конкурсах Фестиваля науки.
+                  p Чтобы принять участие в конкурсах или составить индивидуальный трек посещения — пожалуйста, <a href='#'>зарегистрируйтесь</a>.
+            .auth__info-bg.auth__info-bg--1
+              include auth-decor-1.svg
+            .auth__info-bg.auth__info-bg--2
+              include auth-decor-2.svg
+

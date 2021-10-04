@@ -72,6 +72,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.DatePicker.init(fromPjax);
       APP.Plugins.Upload.init(fromPjax);
       APP.Plugins.LegacySupport.fixImages();
+      APP.Plugins.LAYOUT.init(fromPjax);
     };
 
     // All components from `src/componenets`

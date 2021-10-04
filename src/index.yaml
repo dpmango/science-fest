@@ -7,5 +7,9 @@ PageList:
     ready: 90
   - file: events.html
     ready: 90
+  - file: login.html
+    ready: 80
+  - file: signup.html
+    ready: 80
   - file: ui.html
     ready: 100

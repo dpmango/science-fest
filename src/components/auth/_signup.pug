@@ -1,0 +1,147 @@
+include ../breadcrumbs/_breadcrumbs
+
+// Auth page
+.iPage
+  .iPage__holder
+    .container
+      .iPage__breadcrumbs
+        +breadcrumbs(['Главная', 'Авторизация'])
+      h1.h2-title.c-accent Регистрация
+
+      // auth
+      .signup
+        form(action="").js-validate-form
+          // section
+          .signup__section
+            .row
+              // section col
+              .col.col-4.col-lg-6.col-sm-12
+                .ui-group
+                  label(for="login") Адрес электронной почты
+                    span.required *
+                  input.ui-input(type="email" id="email" required)
+                  span.ui-group__helper На указанный адрес будут отправляться письма с сайта. Почтовый адрес не будет доступен другим пользователям и используется для восстановления пароля, определённых вами оповещений и связи через контактную форму.
+              // section col
+              .col.col-4.col-lg-6.col-sm-12
+                .ui-group
+                  label(for="password") Пароль
+                    span.required *
+                  input.ui-input(type="password" id="password" required)
+                  span.ui-group__helper Пароль должен быть не менее 6 символов длиной.
+
+                .ui-group
+                  label(for="password_repeat") Повторите Пароль
+                    span.required *
+                  input.ui-input(type="password" id="password_repeat" required)
+              // section col
+              .col.col-4.col-lg-12
+                .signup__type
+                  .ui-checkbox.is-radio.size-lg
+                    input(id="type_1" type="radio" name="type" checked)
+                    label(for="type_1")
+                      span Зарегистрироваться как посетитель или участник конкурса
+                  .ui-checkbox.is-radio.size-lg.mt-1
+                    input(id="type_2" type="radio" name="type")
+                    label(for="type_2")
+                      span Зарегистрироваться как организатор
+
+          // section
+          .signup__section
+            .signup__section-subtitle.h4-title.c-accent.lg-hidden Основные данные
+
+            .row.mt-1
+              // section col
+              .col.col-4.col-lg-6.col-sm-12
+                .ui-group
+                  label(for="surname") Фамилия
+                    span.required *
+                  input.ui-input(type="text" id="surname" required)
+              // section col
+              .col.col-4.col-lg-6.col-sm-12
+                .ui-group
+                  label(for="surname") Имя
+                    span.required *
+                  input.ui-input(type="text" id="name" required)
+              // section col
+              .col.col-4.col-lg-6.col-sm-12
+                .ui-group
+                  label(for="patronimic") Отчество
+                    span.required *
+                  input.ui-input(type="text" id="patronimic" required)
+              // section col
+              .col.col-4.col-lg-6.col-sm-12
+                .ui-group
+                  label(for="surname") Телефон
+                  input.ui-input(type="tel" id="phone")
+                  span.ui-group__helper Формат: +7 (123) 123-45-67, доб. 1234
+              // section col
+              .col.col-4.col-lg-12
+                .ui-group
+                  label(for="status") Статус
+                  .ui-group__checkbox-list
+                    .ui-checkbox.is-radio
+                      input(id="status_1" type="radio" name="status")
+                      label(for="status_1")
+                        span Школьник
+                    .ui-checkbox.is-radio
+                      input(id="status_2" type="radio" name="status")
+                      label(for="status_2")
+                        span Студент
+                    .ui-checkbox.is-radio
+                      input(id="status_3" type="radio" name="status")
+                      label(for="status_3")
+                        span Преподаватель
+                    .ui-checkbox.is-radio
+                      input(id="status_4" type="radio" name="status")
+                      label(for="status_4")
+                        span Родитель
+                    .ui-checkbox.is-radio
+                      input(id="status_5" type="radio" name="status")
+                      label(for="status_5")
+                        span Специалист
+                    .ui-checkbox.is-radio
+                      input(id="status_6" type="radio" name="status")
+                      label(for="status_6")
+                        span Дополнительно
+
+              // section col
+              .col.col-4.lg-hidden
+                // empty
+
+              // section col
+              .col.col-4.col-lg-6.col-sm-12
+                .ui-group
+                  label(for="country") Страна
+                  select.js-choices.ui-input(id="country" placeholder="Выберите")
+                    option() Россия
+                    option() Другое
+              // section col
+              .col.col-4.col-lg-6.col-sm-12
+                .ui-group
+                  label(for="region") Регион
+                  select.js-choices.ui-input(id="country" placeholder="Выберите")
+                    option() Москва
+                    option() Санкт-Питербург
+                    option() Сочи
+
+              // section col
+              .col.col-4.lg-hidden
+                // empty
+
+              // section col
+              .col.col-12
+                .ui-checkbox
+                  input(id="maillist" type="checkbox" name="maillist")
+                  label(for="maillist")
+                    span Подписаться на рассылку (Новости о предстоящих мероприятиях и конкурсах Фестиваля)
+
+                .signup__required-fields.mt-2 <span>*</span> — Обязательные поля
+
+              // section col
+              .col.col-4.col-lg-6.col-sm-12
+                .signup__cta
+                  button(type="submit").btn.btn-filled.btn--sm СОЗДАТЬ АККАУНТ
+
+
+
+

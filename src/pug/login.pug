@@ -1,0 +1,11 @@
+---
+title: Авторизация
+---
+extends shared/_layout
+block content
+  .js-header-class(data-class="no-bb")
+
+  include ../components/auth/_login.pug
+
+block footer
+  include ../components/footer/_simple.pug
