@@ -10,6 +10,7 @@
         upevents: undefined,
         news: undefined,
         headliners: undefined,
+        works: undefined,
       },
       responsiveSwipers: {
         backstageSwiper: {
@@ -177,6 +178,16 @@
           slidesPerView: 'auto',
         },
         { navigation: true, pagination: true }
+      );
+
+      // events
+      this.data.swipers.works = _this.utils.buildSwiper(
+        'works',
+        {
+          spaceBetween: 0,
+          slidesPerView: 'auto',
+        },
+        { navigation: false, pagination: false }
       );
     },
     initSwiperDataTree: function () {

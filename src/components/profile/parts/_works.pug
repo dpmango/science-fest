@@ -1,0 +1,29 @@
+
+.profile__section.profileWorks
+  h4.h4-title.c-accent Заявленные работы
+  .profile__slider.swiper-container.js-swiper-works
+    .swiper-wrapper
+      // slide
+      .swiper-slide
+        a(href="#").workCard
+          .workCard__image
+            img(src='img/work.jpg' )
+          .workCard__content
+            .workCard__category Категория
+            .workCard__title НАЗВАНИЕ РАБОТЫ
+            .workCard__date Дата подачи: 16.07.2021
+      // slide
+      .swiper-slide
+        a(href="#").workCard
+          .workCard__image
+            img(src='img/work.jpg' )
+          .workCard__content
+            .workCard__category Категория
+            .workCard__title НАЗВАНИЕ РАБОТЫ
+            .workCard__date Дата подачи: 16.07.2021
+      // slide
+      .swiper-slide
+        a(href="#").workCard
+          .workCard__empty
+            +svgMono('plus')
+            .workCard__empty-title Подать работу

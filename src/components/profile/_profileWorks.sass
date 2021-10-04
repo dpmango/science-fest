@@ -1,0 +1,66 @@
+.profileWorks
+  .swiper-slide
+    height: auto
+    display: flex
+    flex-direction: column
+
+
+
+.workCard
+  position: relative
+  display: block
+  padding-right: 25px
+  &__image
+    position: relative
+    overflow: hidden
+    max-width: 320px
+    height: 290px
+    font-size: 0
+    img
+      height: 100%
+      width: 100%
+      object-fit: cover
+      transition: transform .35s ease-out, filter .25s $ease
+
+  &__content
+    padding-top: 16px
+  &__category
+    font-size: 14px
+    color: $colorPrimary
+  &__title
+    margin-top: 8px
+    font-size: 18px
+    font-weight: 500
+  &__date
+    margin-top: 8px
+    font-size: 14px
+    font-weight: 500
+  &__empty
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    background: white
+    border: 2px dashed $colorPrimary
+    border-radius: 5px
+    height: 290px
+    transition: border .25s $ease, background .25s $ease
+    .ico
+      font-size: 24px
+      color: $colorAccent
+    &:hover
+      background: #E3F2F8
+      border-color: $colorAccent
+  &__empty-title
+    margin-top: 10px
+    font-size: 16px
+    line-height: 120%
+    color: #1BA4DF
+
+  &:hover
+    .workCard
+      &__image
+        img
+          transform: scale(1.075)
+          filter: grayscale(1)

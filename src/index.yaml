@@ -12,6 +12,6 @@ PageList:
   - file: signup.html
     ready: 80
   - file: profile.html
-    ready: 60
+    ready: 80
   - file: ui.html
     ready: 100

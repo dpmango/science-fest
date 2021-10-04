@@ -1,0 +1,24 @@
+.profile__section
+  .profileInfo
+    .profileInfo__avatar
+      img(src='img/profile/avatar.png')
+    .profileInfo__content
+      .profileInfo__head
+        .profileInfo__name Иванов Иван Иванович
+      .profileInfo__contacts
+        .profileInfo__contact
+          .profileInfo__contact-icon
+            +svgMono('user')
+          .profileInfo__contact-content Студент
+        .profileInfo__contact
+          .profileInfo__contact-icon
+            +svgMono('email')
+          .profileInfo__contact-content ivan.ivanov@gmail.com
+        .profileInfo__contact
+          .profileInfo__contact-icon
+            +svgMono('location-outline')
+          .profileInfo__contact-content Россия, Московская область
+    .profileInfo__action
+      a(href="#").profileInfo__edit
+        +svgMono('edit')
+        span Редактировать профиль
