@@ -65,6 +65,7 @@
         let domProps = {};
         const dataBefore = $dom.data('offset-before');
         const dataAfter = $dom.data('offset-after');
+        const dataLoop = $dom.data('loop');
         if (dataBefore) {
           domProps = {
             slidesOffsetBefore: dataBefore,
@@ -74,6 +75,12 @@
           domProps = {
             ...domProps,
             slidesOffsetAfter: dataAfter,
+          };
+        }
+        if (dataLoop !== undefined) {
+          domProps = {
+            ...domProps,
+            loop: dataLoop,
           };
         }
 
@@ -133,7 +140,6 @@
       this.data.swipers.events = _this.utils.buildSwiper(
         'events',
         {
-          loop: true,
           spaceBetween: 0,
           slidesPerView: 'auto',
         },

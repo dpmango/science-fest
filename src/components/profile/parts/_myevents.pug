@@ -1,0 +1,52 @@
+.profile__section
+  h4.h4-title.c-accent Я иду!
+  .profile__slider.swiper-container.js-swiper-events(data-loop="false")
+    .swiper-wrapper
+      // slide
+      .swiper-slide
+        a(href="#").eventCard
+          .eventCard__image
+            img(src='img/events/event-3.jpg' srcset='img/events/event-3@2x.jpg')
+          .eventCard__year 2021
+          .eventCard__date 21 ноября
+          .eventCard__meta
+            | 14:10 — 15:10
+            br
+            | Мастер-Класс | Офлайн
+          .eventCard__row
+            .eventCard__location
+              +svgMono('location-outline')
+              span Тамбов
+            .eventCard__like.is-active
+              .eventCard__like-icon
+                +svgMono('like-outline')
+                +svgMono('like')
+              span Я ИДУ!
+        .eventCard__arrow.dynamic-arrow.dynamic-arrow--wide
+          +svgMono('arrow-right-end')
+        .eventCard__title Конкурс для журналистов и блогеров «ProПигмент»
+
+      // slide
+      .swiper-slide
+        a(href="#").eventCard
+          .eventCard__image
+            img(src='img/events/event-2.jpg' srcset='img/events/event-2@2x.jpg')
+          .eventCard__year 2021
+          .eventCard__date 21 ноября
+          .eventCard__meta
+            | 14:10 — 15:10
+            br
+            | Мастер-Класс | Офлайн
+          .eventCard__row
+            .eventCard__location
+              +svgMono('location-outline')
+              span Тамбов
+            .eventCard__like.is-active
+              .eventCard__like-icon
+                +svgMono('like-outline')
+                +svgMono('like')
+              span Я ИДУ!
+        .eventCard__arrow.dynamic-arrow.dynamic-arrow--wide
+          +svgMono('arrow-right-end')
+        .eventCard__title Конкурс для журналистов и блогеров «ProПигмент»
+

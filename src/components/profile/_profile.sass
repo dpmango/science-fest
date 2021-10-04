@@ -1,0 +1,160 @@
+// profile
+.profile
+  margin-top: 24px
+  &__section
+    margin: 60px 0
+  &__tabs
+
+  &__tabs-nav
+    position: relative
+    width: 100%
+    display: flex
+    align-items: center
+    margin: 0px 0 0
+    padding: 0 0 2px
+    li
+      flex: 0 0 auto
+      display: inline-block
+      margin-right: auto
+      &:last-child
+        margin-right: 0
+    a
+      position: relative
+      display: inline-block
+      padding: 5px
+      font-size: 24px
+      font-weight: 500
+      color: $colorPrimary
+      transition: color .25s $ease, border .25s $ease
+      &::after
+        display: inline-block
+        content: ' '
+        position: absolute
+        bottom: 0
+        left: 5px
+        right: 5px
+        height: 2px
+        border-bottom: 2px dashed currentColor
+        transition: right .15s ease-out
+        will-change: right
+      &:hover
+        &::after
+          right: 100%
+
+    &--width-auto
+      width: auto
+      margin-left: -5px
+      li
+        margin-right: 30px
+    li
+      &.is-active
+        a
+          color: $colorAccent
+          &::after
+            right: 100%
+
+  &__slider
+    margin-top: 32px
+    .swiper-slide
+      flex: 0 0 $col3
+      max-width: $col3
+    .swiper-navbar
+      display: none
+    .eventCard
+      max-width: 336px
+      padding-right: 26px
+
++r($xl)
+  .profile
+    padding: 30px 0 50px
+    &__slider
+      margin-left: -30px
+      margin-right: -30px
+      padding-left: 30px
+      padding-right: 30px
+      .swiper-slide
+        flex: 0 0 354px
+        max-width: 354px
+
++r($sm)
+  .profile
+    &__slider
+      margin-top: 14px
+      margin-left: -20px
+      margin-right: -20px
+      padding-left: 20px
+      padding-right: 20px
+      // .swiper-slide
+      //   flex: 0 0 225px
+      //   max-width: 225px
+
+
+// PROFILE COMPONENTS
+.profileNote
+  margin-top: 18px
+  background: #E3F2F8
+  border-radius: 10px
+  padding: 44px 26px 36px
+  p
+    color: #5F5E5E
+
+
+.profileInfo
+  display: flex
+  &__avatar
+    position: relative
+    overflow: hidden
+    flex: 0 0 112px
+    max-width: 112px
+    height: 112px
+    display: flex
+    flex-direction: column
+    img
+      flex: 1 1 auto
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__content
+    padding-left: 36px
+  &__head
+    display: flex
+    align-items: center
+  &__name
+    font-size: 24px
+    font-weight: 500
+  &__edit
+    margin-left: 32px
+    display: inline-flex
+    align-items: center
+    color: $colorPrimary
+    transition: color .25s $ease
+    .ico
+      color: $colorAccent
+      font-size: 20px
+      margin-right: 8px
+    span
+      font-size: 16px
+      font-weight: 500
+    &:hover
+      color: $colorAccent
+
+
+  &__contacts
+    margin: 16px 0
+    display: flex
+    flex-direction: column
+
+  &__contact
+    margin-bottom: 15px
+    display: inline-flex
+    align-items: center
+    &:last-child
+      margin-bottom: 0
+    &-icon
+      flex: 0 0 20px
+      color: $colorAccent
+      font-size: 16px
+      margin-right: 4px
+    &-content
+      font-size: 16px
+      font-weight: 500

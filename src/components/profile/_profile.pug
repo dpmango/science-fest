@@ -1,0 +1,77 @@
+include ../breadcrumbs/_breadcrumbs
+
+// Profile page
+.iPage
+  .iPage__holder
+    .container
+      .iPage__breadcrumbs
+        +breadcrumbs(['Главная', 'Личный кабинет'])
+      h1.h2-title.c-accent Личный кабинет
+
+      // profile
+      .profile.js-tabs
+        .profile__tabs
+          ul.profile__tabs-nav.profile__tabs-nav--width-auto.js-tabs-nav
+            li.is-active
+              a(href="#profile") Профиль
+            li
+              a(href="#works") Заявленные работы
+            li
+              a(href="#events") Интересные мероприятия
+            li
+              a(href="#myevents") Я иду!
+
+        // NEXT TAB (Profile)
+        .js-tab(data-tab="profile" style="display: block")
+          .profile__section
+            .profileInfo
+              .profileInfo__avatar
+                img(src='img/profile/avatar.png')
+              .profileInfo__content
+                .profileInfo__head
+                  .profileInfo__name Иванов Иван Иванович
+                  a(href="#").profileInfo__edit
+                    +svgMono('edit')
+                    span Редактировать профиль
+                .profileInfo__contacts
+                  .profileInfo__contact
+                    .profileInfo__contact-icon
+                      +svgMono('user')
+                    .profileInfo__contact-content Студент
+                  .profileInfo__contact
+                    .profileInfo__contact-icon
+                      +svgMono('email')
+                    .profileInfo__contact-content ivan.ivanov@gmail.com
+                  .profileInfo__contact
+                    .profileInfo__contact-icon
+                      +svgMono('location-outline')
+                    .profileInfo__contact-content Россия, Московская область
+
+          // note
+          .profile__section
+            h4.h4-title.c-accent Объявление
+
+            .profileNote
+              .wysiwyg
+                h4 Уважаемые участники конкурса детского рисунка!
+                p Здесь показаны все рисунки, которые Вы отправили на конкурс «Мир науки глазами детей».
+                p Работы на конкурс принимаются до 12 сентября 2021 года включительно.
+                p Публикация работ модераторами будет проводиться в период с 13 по 30 сентября 2021 года. Экспертиза и рассмотрение работ жюри будут проведены до 3 октября. Информирование о результатах конкурсного отбора будет осуществляться по электронной почте в срок до 6 октября.
+                p Выставка работ победителей состоится 8-10 октября 2021 года в рамках XVI Всероссийского Фестиваля науки в городе Москве. Награждение победителей состоится 10 октября.
+                p После публикации каждой работы модератором конкурса под ней появится ссылка для скачивания сертификата участника - автора этой работы. Преподаватели, приславшие работы своих учеников, смогут получить благодарность за подготовку участников конкурса после публикации модератором как минимум одной такой работы.
+                p Благодарим Вас за участие в конкурсе и желаем удачи!
+
+        // NEXT TAB (works)
+        .js-tab(data-tab="works")
+          .profile__section
+            h4.h4-title.c-accent Заявленные работы
+
+        // NEXT TAB (events)
+        .js-tab(data-tab="events")
+          include parts/_events
+
+        // NEXT TAB (events)
+        .js-tab(data-tab="myevents")
+          include parts/_myevents
+
+

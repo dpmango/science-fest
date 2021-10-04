@@ -30,6 +30,7 @@
       $tabs.hide();
       $tab.fadeIn(250, function () {
         $tab.addClass('is-active');
+        APP.Plugins.Sliders.update();
       });
     },
     eventListeners: function () {
