@@ -1,0 +1,152 @@
+
+// Auth
+.auth
+  display: flex
+  flex-wrap: wrap
+  margin-top: 42px
+  &__form
+    flex: 0 0 400px
+    max-width: 400px
+    padding-right: 20px
+    form
+      max-width: 312px
+
+  &__content
+    position: relative
+    flex: 0 0 calc(100% - 400px)
+    max-width: calc(100% - 400px)
+    min-width: 1px
+
+  &__info
+    position: relative
+    z-index: 2
+    background: #2B268E
+    color: white
+    overflow: hidden
+
+  &__info-content
+    position: relative
+    z-index: 2
+    padding: 72px 48px 72px
+    width: 100%
+    .wysiwyg
+      p + p
+        margin-top: 1.3em
+      a
+        color: #FFF06A
+  &__info-body
+    width: 100%
+    max-width: 685px
+
+  &__info-bg
+    position: absolute
+    z-index: 1
+    pointer-events: none
+    svg
+      max-width: 100%
+    &--1
+      right: 5%
+      top: 0
+    &--2
+      right: 10%
+      bottom: -3px
+
+  &__btns
+    display: flex
+    width: 100%
+    max-width: 340px
+    .btn
+      flex: 0 0 170px
+      width: 100%
+      max-width: 170px
+  &__recover-link
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding-left: 10px
+    padding-right: 10px
+    a
+      flex: 0 0 auto
+      font-size: 14px
+      line-height: 1.9
+      text-decoration-line: underline
+      color: #E54323
+      text-align: center
+      transition: color .25s $ease
+      &:hover
+        color: $colorPrimary
+
++r($xl)
+  .auth
+    &__form
+      flex-basis: 340px
+      max-width: 340px
+    &__content
+      flex-basis: calc(100% - 340px)
+      max-width: calc(100% - 340px)
+
++r($lg)
+  .auth
+    display: block
+    &__form
+      max-width: 100%
+      form
+        max-width: 100%
+    &__content
+      max-width: calc(100% + 60px)
+      margin-left: -30px
+      margin-right: -30px
+      margin-bottom: -36px
+    &__info-content
+      position: relative
+      z-index: 2
+      padding: 72px 30px 84px
+
++r($sm)
+  .auth
+    &__content
+      margin-left: -20px
+      margin-right: -20px
+    &__info-content
+      padding-left: 20px
+      padding-right: 20px
+    &__info-bg
+      position: absolute
+      z-index: 1
+      pointer-events: none
+      text-align: center
+      svg
+        max-width: 70%
+      &--1
+        right: -5px
+        top: 0
+      &--2
+        right: 0%
+        bottom: -5%
+
+
+// social login
+.social-login
+  margin-top: -8px
+  &__label
+    font-size: 16px
+    font-weight: 500
+  &__list
+    margin: 10px -10px 24px
+    display: flex
+    flex-wrap: wrap
+    padding: 0
+    li
+      flex: 0 0 auto
+      margin: 0
+    a
+      display: inline-block
+      padding: 10px
+      transition: opacity .25s $ease
+      font-size: 0
+      .ico
+        font-size: 32px
+      &:hover
+        opacity: 0.7

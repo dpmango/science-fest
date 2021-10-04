@@ -9,6 +9,22 @@
     margin-bottom: 7px
     line-height: 1
     color: $fontColor
+    .required
+      font-size: 16px
+      line-height: 100%
+      color: #E54323
+      margin-left: 6px
+  &__helper
+    display: inline-block
+    margin-top: 10px
+    font-size: 12px
+    line-height: 15px
+    color: $colorFontGray
+  &__checkbox-list
+    margin-top: 16px
+    margin-botom: -30px
+
+
   .btn, .ui-upload
     // mind the label space
     margin-top: calc(16px + 12px)
@@ -22,6 +38,14 @@
     .btn
       margin-top: 0
 
++r($lg)
+  .ui-group
+    &__checkbox-list
+      display: flex
+      flex-wrap: wrap
+      .ui-checkbox
+        flex: 0 0 50%
+        max-width: 50%
 +r($md)
   .ui-group
     margin-bottom: 15px
