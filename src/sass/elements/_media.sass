@@ -17,7 +17,7 @@
     padding-bottom: 75%
   &[data-ar='21:9']
     padding-bottom: 42.85%
-  img
+  img, iframe, video
     left: 0
     position: absolute
     top: 0
@@ -32,7 +32,8 @@
       background-image: none !important
   &.is-loaded
     img,
-    picture
+    picture,
+    iframe
       opacity: 1
 
 // when no scaler parent found

@@ -1,0 +1,122 @@
+// page sass
+//
+.i-event
+  margin-top: 48px
+  margin-bottom: 60px
+  &__sidebar
+    flex: 0 0 330px
+    max-width: 330px
+    position: sticky
+    top: 24px
+    align-items: flex-start
+    align-self: flex-start
+    padding-right: 20px
+  &__sidebar-cta
+    margin-top: 32px
+  &__image
+    position: relative
+    z-index: 1
+    overflow: hidden
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    font-size: 0
+    img
+      max-width: 100%
+  &__date
+    background: #2B268E
+    color: white
+    padding: 22px 18px
+    font-size: 18px
+    font-weight: 500
+    line-height: 140%
+  &__like
+    margin: 22px 0
+    cursor: pointer
+  &__location
+    font-size: 16px
+    line-height: 150%
+    a
+      color: $colorPrimary
+      transition: color .25s $ease
+      &:hover
+        color: $colorAccent
+  &__speakers
+    margin-top: 32px
+  &__content
+    flex: 0 0 calc(100% - 330px)
+    max-width: calc(100% - 330px)
+  &__video
+    margin-top: 32px
+    max-width: 680px
+
+  &__speaker
+    display: flex
+    align-items: center
+    margin-top: 20px
+    &:hover
+      .i-event__speaker-image
+        img
+          transform: scale(1.075)
+          filter: grayscale(1)
+
+  &__speaker-image
+    position: relative
+    width: 75px
+    height: 90px
+    background: #EDEDED
+    img
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      object-fit: cover
+      transition: transform .35s ease-out, filter .25s $ease
+  &__speaker-name
+    padding-left: 20px
+    font-size: 16px
+    line-height: 1.5
+
+
++r($lg)
+  .i-event
+    &__sidebar
+      order: 2
+      margin-top: 32px
+    &__content
+      order: 1
+      flex-basis: 100%
+      max-width: 100%
+
+
+.i-news
+  &__date
+    font-size: 18px
+    line-height: 150%
+    color: #B1B1B1
+    margin-bottom: 8px
+
+  &__content
+    max-width: 1130px
+
+  &__body
+    margin-top: 34px
+    max-width: 906px
+    margin-left: auto
+  &__panel
+    margin-top: 48px
+    background: #F7F7F7
+    padding: 22px 40px
+  &__map
+    height: 530px
+    display: flex
+    flex-direction: column
+    > div
+      flex: 1 1 auto
+      width: 100%
+      height: 100%
+
++r($md)
+  .i-news
+    &__map
+      height: 400px

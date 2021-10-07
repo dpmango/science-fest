@@ -1,0 +1,80 @@
+include ../breadcrumbs/_breadcrumbs
+
+// Event page
+.iPage
+  .iPage__holder
+    .container
+      .iPage__breadcrumbs
+        +breadcrumbs(['Главная', 'Мероприятия'])
+      h1.h2-title.c-accent «ОСВОЕНИЕ КОСМОСА» В МЕМОРИАЛЬНОМ МУЗЕЕ КОСМОНАВТИКИ
+
+      // event
+      .i-event
+        .row
+          // sidebar
+          .i-event__sidebar
+            .i-event__image
+              img(src="img/events/event-3.jpg" srcset="img/events/event-3@2x.jpg")
+            .i-event__date
+              | Москва <br/>
+              | 10 октября 2021<br/>
+              | 10:00 — 18:00<br/>
+            .i-event__like.eventCard__like
+              .eventCard__like-icon
+                +svgMono('like-outline')
+                +svgMono('like')
+              span Я ИДУ!
+            .i-event__location
+              | Выставка | Офлайн<br/>
+              | Центральная площадка, Москва<br/>
+              a(href="#") Дирекция Фестиваля науки
+            .i-event__speakers
+              .h5-title Участники
+              a(href="#").i-event__speaker
+                .i-event__speaker-image
+                  img(src='img/headliners/headliner-1.jpg')
+                .i-event__speaker-name Дирекция Фестиваля науки
+              a(href="#").i-event__speaker
+                .i-event__speaker-image
+                  img(src='img/avatarPlaceholder.png')
+                .i-event__speaker-name Дирекция Фестиваля науки
+            .i-event__sidebar-cta
+              a(href="signup.html").btn.btn-filled.btn-primary--white.btn--block Зарегистрироваться
+
+          // content
+          .i-event__content
+            .wysiwyg
+              h4.f-400 Тематическая площадка Фестиваля NAUKA 0+.
+                br
+                | Экскурсии в лаборатории, уникальные лектории и полное погружение в тему.
+                br
+                | Прикоснитесь к науке!
+
+              p
+                strong Область знаний:
+                br
+                | Биология и науки о Жизни Математика и информатика Науки о Земле Техника и инженерные науки Физика и астрономия Химия и нанотехнологии Другое
+
+              p
+                strong Целевая аудитория:
+                br
+                | будет интересно всем
+
+              p
+                strong Адрес:
+                br
+                | 129515, Москва , пр-кт Мира 111
+
+              p
+                strong Ведущий:
+                br
+                | Дирекция Фестиваля науки
+
+              p
+                strong Организация:
+                br
+                | Дирекция Фестиваля науки
+
+            .i-event__video
+              .scaler(data-ar="16:9").mt-2
+                iframe(width="100%" height="100%" src="https://www.youtube.com/embed/uYQN6oiO9zY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
